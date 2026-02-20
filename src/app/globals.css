@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .container {
+    @apply mx-auto w-full px-4 4k:max-w-[2100px] 3xl:max-w-[1622px] 2xl:max-w-[1297px] xl:max-w-[1200px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] max-w-[100%];
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  --color-grayPaths-100: #FAFAFA;
+  --color-greenPaths-100: #32D774;
+  --color-purplePaths-100: #7E20E2;
+  --color-blackPaths-100: #0A0113;
+
+  --breakpoint-4k: 2100px;
+  --breakpoint-3xl: 1622px;
+  --breakpoint-2xl: 1297px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-lg: 960px;
+  --breakpoint-md: 720px;
+  --breakpoint-sm: 540px;
+
+  --font-size-115: 115px;
+  --font-size-100: 100px;
+
+  --max-width-full: 1920px;
+}
+
+.hero-swiper {
+  padding-bottom: 16px;
+}
+
+.hero-swiper .swiper-pagination {
+  bottom: 6px !important;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+  margin: 0 6px !important;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  background: #32d774; /* greenPaths-100 */
+}
+
+
+/* logo swiper */
+
+.clients-marquee {
+  position: relative;
+}
+
+.clients-marquee::before,
+.clients-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.clients-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.clients-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
 }
