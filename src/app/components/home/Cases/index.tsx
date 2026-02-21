@@ -1,0 +1,132 @@
+"use client";
+
+import { images } from "@/app/assets/images";
+import CaseCard from "../../CaseCard";
+import ServicesCarousel from "../../ServicesCarousel";
+import { ButtonDefault } from "../../ui";
+import type { StaticImageData } from "next/image";
+import ButtonOutlinePurple from "../../ui/buttonOutlinePurple/buttonOutline";
+
+type CaseItem = {
+  id: string;
+  title: string;
+  subtitle?: string;
+  description?: string;
+  image: StaticImageData;
+};
+
+const cases: CaseItem[] = [
+  {
+    id: "michelin-1",
+    title: "MICHELIN CONNECTED FLEET",
+    subtitle: "TRANSPOSUL 2025",
+    description: "Descrição do Case*",
+    image: images.displayMichelin,
+  },
+  {
+    id: "eventos-1",
+    title: "EVENTOS",
+    subtitle: "2025",
+    description: "Descrição do Case*",
+    image: images.displayMichelin,
+  },
+  {
+    id: "feira-1",
+    title: "FEIRA",
+    subtitle: "2025",
+    description: "Descrição do Case*",
+    image: images.displayMichelin,
+  },
+  {
+    id: "michelin-2",
+    title: "MICHELIN CONNECTED FLEET",
+    subtitle: "TRANSPOSUL 2025",
+    description: "Descrição do Case*",
+    image: images.displayMichelin,
+  },
+  {
+    id: "eventos-2",
+    title: "EVENTOS",
+    subtitle: "2025",
+    description: "Descrição do Case*",
+    image: images.displayMichelin,
+  },
+  {
+    id: "feira-2",
+    title: "FEIRA",
+    subtitle: "2025",
+    description: "Descrição do Case*",
+    image: images.displayMichelin,
+  },
+];
+
+export default function ProjectsShowcaseSection() {
+  return (
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <div className="h-[71%] bg-black" />
+        <div className="h-[29%] bg-[#7C3AED]" />
+      </div>
+
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute left-1/2 top-0 h-130 w-245 -translate-x-1/2 rounded-full bg-purple-600/20 blur-[140px]" />
+        <div className="absolute left-1/2 top-95 h-130 w-245 -translate-x-1/2 rounded-full bg-emerald-500/10 blur-[160px]" />
+      </div>
+
+      <div className="container relative">
+        <div className="px-4 py-16">
+          <div className="mx-auto w-full text-center">
+            <p className="font-medium 3xl:text-4xl xl:text-2xl text-xl tracking-wide text-white/90 pb-16">
+              Temos o orgulho de atender as maiores empresas do Brasil em diversos segmentos.
+              Oferecemos um amplo portfólio que se aplica a qualquer necessidade de comunicação.
+            </p>
+          </div>
+
+          <ServicesCarousel />
+
+          <div className="flex justify-center my-16">
+            <ButtonDefault className="cursor-pointer" href="#">
+              Ver Cases
+            </ButtonDefault>
+          </div>
+
+          <div className="mx-auto text-center">
+            <h2 className="text-4xl font-extrabold tracking-tight text-white xl:text-8xl md:text-6xl">
+              GRANDES PROJETOS
+              <br />
+              <span className="text-greenPaths-100">MARCAM A NOSSA</span>
+              <br />
+              <span className="text-greenPaths-100">TRAJETÓRIA</span>
+            </h2>
+
+            <p className="mx-auto mt-6 text-3xl text-white font-medium">
+              Na nossa comunicação, cada projeto é conduzido com dedicação e expertise, refletindo o empenho
+              de uma equipe apaixonada pelo que faz. Com foco na qualidade de cada entrega, transformamos
+              desafios em resultados surpreendentes.
+            </p>
+          </div>
+
+          {/* GRID de cases */}
+          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+            {cases.map((item) => (
+              <CaseCard
+                key={item.id}
+                title={item.title}
+                subtitle={item.subtitle}
+                description={item.description}
+                image={item.image}
+                onClick={() => console.log("clicou:", item.id)}
+              />
+            ))}
+          </div>
+
+          <div className="flex justify-center mt-16">
+            <ButtonOutlinePurple href="/cases">
+              Ir para página de cases
+            </ButtonOutlinePurple>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
