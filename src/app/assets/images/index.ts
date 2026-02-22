@@ -15,7 +15,6 @@ import capa3m from "./capa-3m.png"
 import capaCipatex from "./capa-cipatex.png"
 import cashMe from "./CashMe.png"
 import cinpal from "./Cinpal.png"
-import cipatex from "./Cipatex.png"
 import cognaAwareness from "./Cogna_awareness.png"
 import cognaConsultoria from "./Cogna_Consultoria.png"
 import cogna from "./Cogna.png"
@@ -49,11 +48,9 @@ import mapeamentoMd from "./mapeamento-md.png"
 import marca from "./marca.png"
 import marketing from "./marketing.png"
 import material from "./material.png"
-import michelin from "./michelin.png"
 import mosaicoColaboradores from "./Mosaico_Colaboradores.png"
 import objetivo from "./objetivo.png"
 import ocpBrasil from "./OCPbrasil.png"
-import oxitec from "./Oxitec.png"
 import planejamentoCase from "./planejamento-case.png"
 import planejamento from "./planejamento.png"
 import quemSomosBase3 from "./quem-somos-base3.png"
@@ -80,8 +77,19 @@ import vendiNew from "./vendi-new.png"
 import vendi from "./vendi.png"
 import video from "./video.png"
 import youtube from "./youtube.png"
+import card3m from "./3mcard.png"
+import michelinCard from "./michelin-card.png"
+import oxitecCard from "./OxitecCard.png"
+import cipatexCard from "./CipatexCard.png"
+import fagronCard from "./fagronCard.png"
+
 
 export const images = {
+    card3m,
+    michelinCard,
+    oxitecCard,
+    cipatexCard,
+    fagronCard,
     img3M,
     aviaoPapel,
     ballsGreen,
@@ -99,7 +107,6 @@ export const images = {
     capaCipatex,
     cashMe,
     cinpal,
-    cipatex,
     cognaAwareness,
     cognaConsultoria,
     cogna,
@@ -133,11 +140,10 @@ export const images = {
     marca,
     marketing,
     material,
-    michelin,
     mosaicoColaboradores,
     objetivo,
     ocpBrasil,
-    oxitec,
+    // oxitec,
     planejamentoCase,
     planejamento,
     quemSomosBase3,
