@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
+import { Autoplay } from "swiper/modules";
 
 import swiperLeft from "@/app/assets/images/swiper-left.png";
 import swiperRight from "@/app/assets/images/swiper-right.png";
@@ -18,34 +19,34 @@ type ServiceItem = {
 
 
 const services: ServiceItem[] = [
-    { 
-        title: "Planejamento e campanhas", 
-        desc: "Concebemos, lançamos, impulsionamos vendas, executamos trade marketing, promovemos endomarketing e criamos planos de mídia para maximizar sua presença on-line e off-line.", 
-        image: images.planejamento 
+    {
+        title: "Planejamento e campanhas",
+        desc: "Concebemos, lançamos, impulsionamos vendas, executamos trade marketing, promovemos endomarketing e criamos planos de mídia para maximizar sua presença on-line e off-line.",
+        image: images.planejamento
     },
-    { 
-        title: "Materiais para apoio de vendas", 
-        desc: "Produzimos manuais, catálogos, folhetos técnicos, treinamentos de vendas, press kits, apresentações de resultados e vídeos explicativos para potencializar sua comunicação e impacto de vendas.", 
+    {
+        title: "Materiais para apoio de vendas",
+        desc: "Produzimos manuais, catálogos, folhetos técnicos, treinamentos de vendas, press kits, apresentações de resultados e vídeos explicativos para potencializar sua comunicação e impacto de vendas.",
         image: images.material
     },
-    { 
-        title: "Marketing Digital", 
-        desc: "Gerenciamos redes sociais, sites e hotsites, implementamos SAC 2.0, otimizamos mídia performance, ações estratégicas e presença on-line com influenciadores.", 
+    {
+        title: "Marketing Digital",
+        desc: "Gerenciamos redes sociais, sites e hotsites, implementamos SAC 2.0, otimizamos mídia performance, ações estratégicas e presença on-line com influenciadores.",
         image: images.marketing
     },
-    { 
-        title: "Mapeamento de mercado", 
-        desc: "Oferecemos serviços essenciais em pesquisa de mercado, incluindo monitoramento de marca, análise de Share of Voice e Search, e identificação de tendências de mercado para impulsionar o crescimento empresarial.", 
+    {
+        title: "Mapeamento de mercado",
+        desc: "Oferecemos serviços essenciais em pesquisa de mercado, incluindo monitoramento de marca, análise de Share of Voice e Search, e identificação de tendências de mercado para impulsionar o crescimento empresarial.",
         image: images.mapeamentoMd
     },
-    { 
-        title: "Feiras e live marketing", 
-        desc: "Grande expertise na criação e produção de eventos presenciais e on-line, ambientação de stands para feiras, ativações de guerrilha e organização de convenções, focando em soluções inovadoras de live marketing.", 
+    {
+        title: "Feiras e live marketing",
+        desc: "Grande expertise na criação e produção de eventos presenciais e on-line, ambientação de stands para feiras, ativações de guerrilha e organização de convenções, focando em soluções inovadoras de live marketing.",
         image: images.feiraMkt
     },
-    { 
-        title: "Gestão e produção gráfica", 
-        desc: "Gerenciamos a produção gráfica, abrangendo desde a seleção de fornecedores e acompanhamento de entregas até a produção de brindes, materiais gráficos, conteúdo audiovisual, logística e manuseio de materiais.", 
+    {
+        title: "Gestão e produção gráfica",
+        desc: "Gerenciamos a produção gráfica, abrangendo desde a seleção de fornecedores e acompanhamento de entregas até a produção de brindes, materiais gráficos, conteúdo audiovisual, logística e manuseio de materiais.",
         image: images.gestaoGrafica
     },
 ];
@@ -56,10 +57,9 @@ export default function ServicesCarousel() {
 
     return (
         <div className="relative mx-auto w-full max-w-5xl">
-            {/* setas (fora do swiper, no meio da altura) */}
             <button
                 type="button"
-                className="swiper-left hidden md:flex absolute left-[-72px] top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white/90 text-[#5b21b6] shadow-lg hover:scale-105 transition"
+                className="swiper-left hidden xl:flex absolute -left-18 top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white/90 text-[#5b21b6] shadow-lg hover:scale-105 transition"
                 aria-label="Anterior"
                 onClick={() => swiperRef.current?.slidePrev()}
             >
@@ -73,7 +73,7 @@ export default function ServicesCarousel() {
 
             <button
                 type="button"
-                className="swiper-right hidden md:flex absolute right-[-72px] top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white/90 text-[#5b21b6] shadow-lg hover:scale-105 transition"
+                className="swiper-right hidden xl:flex absolute -right-18 top-1/2 -translate-y-1/2 h-12 w-12 items-center justify-center rounded-full bg-white/90 text-[#5b21b6] shadow-lg hover:scale-105 transition"
                 aria-label="Próximo"
                 onClick={() => swiperRef.current?.slideNext()}
             >
@@ -85,13 +85,23 @@ export default function ServicesCarousel() {
                 />
             </button>
 
-            {/* Swiper */}
+
             <Swiper
+                modules={[Autoplay]}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
-                loop
-                grabCursor
+                slidesPerView={1}
                 spaceBetween={45}
-                slidesPerView={3}
+                loop={true}
+                speed={700}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                breakpoints={{
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                }}
             >
                 {services.map((item, index) => {
                     return (
@@ -112,9 +122,6 @@ export default function ServicesCarousel() {
                                     {item.desc}
                                 </p>
                             </article>
-                            {/* title: string;
-    desc: string;
-    icon: string; */}
                         </SwiperSlide>
                     );
                 })}

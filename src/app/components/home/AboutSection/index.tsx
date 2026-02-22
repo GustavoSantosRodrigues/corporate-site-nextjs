@@ -3,23 +3,21 @@ import { ButtonDefault } from "@/app/components/ui";
 
 export default function AboutSection() {
   return (
-    <section className="pt-20 pb-64">
+    <section className="pt-20 3xl:pb-64 md:pb-40 pb-20">
       <div className="container">
         <div className="grid xl:grid-cols-2 gap-12 items-center">
-          {/* ESQUERDA */}
           <div>
-            <h2 className="font-extrabold uppercase leading-[1.05] 3xl:text-[100px] xl:text-7xl md:text-5xl text-3xl">
+            <h2 className="font-extrabold uppercase leading-[1.05] 3xl:text-8xl xl:text-7xl md:text-5xl lg:text-left text-center text-4xl">
               UMA <span className="text-purplePaths-100">AGÊNCIA</span> QUE{" "}
               <span className="text-purplePaths-100">ATENDE</span> E ENTENDE.
             </h2>
 
-            <div className="mt-16">
+            <div className="mt-16 flex justify-center lg:justify-start">
               <ButtonDefault href="#contato">Conheça a Base3</ButtonDefault>
             </div>
           </div>
 
-          {/* DIREITA */}
-          <div className="space-y-10 text-lg xl:text-xl leading-relaxed text-black">
+          <div className="space-y-10  text-xl  leading-relaxed text-black">
             <p>
               Nosso trabalho também é consultivo – oferecemos estratégias,
               soluções e operacionalização.

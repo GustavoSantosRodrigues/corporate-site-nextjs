@@ -32,7 +32,7 @@ export function ButtonDefault({
     before:transition-all before:duration-500
     before:blur-md
     hover:before:opacity-100
-    3xl:text-4xl xl:text-2xl text-lg
+    3xl:text-4xl lg:text-2xl md:text-xl text-lg
     md:py-4 py-3
     md:px-28 px-10
     ${className}

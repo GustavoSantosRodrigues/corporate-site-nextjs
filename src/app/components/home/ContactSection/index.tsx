@@ -5,19 +5,19 @@ import { images } from "@/app/assets/images";
 
 export default function ContactSection() {
   return (
-   <section className="relative bg-white py-24">
-      <div className="container relative mx-auto grid items-center gap-12 px-4 lg:grid-cols-2">
+   <section className="relative bg-white md:py-24 py-16">
+      <div className="container relative mx-auto grid items-center gap-12 px-4 xl:grid-cols-2">
 
         <div className="relative">
           
           <Image
             src={images.aviaoPapel}
             alt="avião de papel"
-            className="pointer-events-none absolute -top-60 left-[70%] -translate-x-1/2 opacity-90 z-50"
+            className="xl:block hidden pointer-events-none absolute -top-60 left-[70%] -translate-x-1/2 opacity-90 z-50"
             priority
           />
 
-          <h2 className="xl:text-8xl md:text-6xl text-4xl font-extrabold">
+          <h2 className="xl:text-8xl md:text-6xl text-3xl font-extrabold ">
             <span className="text-purple-600">COMUNICAÇÃO</span>
             <br />
             <span className="text-black">É O NOSSO NEGÓCIO.</span>

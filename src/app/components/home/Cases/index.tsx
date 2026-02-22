@@ -6,6 +6,9 @@ import ServicesCarousel from "../../ServicesCarousel";
 import { ButtonDefault } from "../../ui";
 import type { StaticImageData } from "next/image";
 import ButtonOutlinePurple from "../../ui/buttonOutlinePurple/buttonOutline";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 type CaseItem = {
   id: string;
@@ -91,7 +94,7 @@ export default function ProjectsShowcaseSection() {
           </div>
 
           <div className="mx-auto text-center">
-            <h2 className="text-4xl font-extrabold tracking-tight text-white xl:text-8xl md:text-6xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-white xl:text-8xl md:text-6xl">
               GRANDES PROJETOS
               <br />
               <span className="text-greenPaths-100">MARCAM A NOSSA</span>
@@ -99,25 +102,55 @@ export default function ProjectsShowcaseSection() {
               <span className="text-greenPaths-100">TRAJETÓRIA</span>
             </h2>
 
-            <p className="mx-auto mt-6 text-3xl text-white font-medium">
+            <p className="mx-auto mt-6 md:text-3xl text-xl   text-white font-medium">
               Na nossa comunicação, cada projeto é conduzido com dedicação e expertise, refletindo o empenho
               de uma equipe apaixonada pelo que faz. Com foco na qualidade de cada entrega, transformamos
               desafios em resultados surpreendentes.
             </p>
           </div>
 
-          {/* GRID de cases */}
-          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-            {cases.map((item) => (
-              <CaseCard
-                key={item.id}
-                title={item.title}
-                subtitle={item.subtitle}
-                description={item.description}
-                image={item.image}
-                onClick={() => console.log("clicou:", item.id)}
-              />
-            ))}
+          <div className="hidden xl:block">
+            <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+              {Array.isArray(cases) && cases.map((item) => (
+                <CaseCard
+                  key={item.id}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  description={item.description}
+                  image={item.image}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div className="block xl:hidden mt-16">
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              speed={1000}
+              loop={true}
+              spaceBetween={16}
+              slidesPerView={1}
+              breakpoints={{
+                1024: { slidesPerView: 2 },
+              }}
+            >
+              {cases.map((item) => (
+                <SwiperSlide key={item.id} className="h-auto">
+                  <div className="h-full">
+                    <CaseCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      description={item.description}
+                      image={item.image}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           <div className="flex justify-center mt-16">

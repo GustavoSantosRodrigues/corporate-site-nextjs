@@ -3,10 +3,9 @@ import { images } from "@/app/assets/images";
 
 export default function TrustSection() {
   return (
-    <section className="relative bg-black text-white pb-5 ">
+    <section className="relative bg-black text-white py-5">
 
-      {/* IMAGEM FLUTUANDO — INVADINDO A SEÇÃO DE CIMA */}
-      <div className="absolute left-0 w-full 3xl:-top-65 z-20 pointer-events-none">
+      <div className="absolute left-0 w-full 3xl:-top-65 xl:-top-40 md:-top-36 lg:-top-48 z-20 pointer-events-none md:block hidden">
         <Image
           src={images.handOnly}
           alt="Aperto de mãos"
@@ -15,8 +14,7 @@ export default function TrustSection() {
         />
       </div>
 
-      {/* CONTEÚDO */}
-      <div className="container my-10 xl:pt-72">
+      <div className="container my-10 xl:pt-72 md:pt-28">
         <h2
           className="
             text-center uppercase font-extrabold

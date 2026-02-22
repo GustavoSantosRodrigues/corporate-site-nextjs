@@ -36,15 +36,17 @@
 }
 
 .hero-swiper .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  width: 15px !important;
+  height: 15px !important;
   background: rgba(255, 255, 255, 0.6);
   opacity: 1;
   margin: 0 6px !important;
 }
 
 .hero-swiper .swiper-pagination-bullet-active {
-  background: #32d774; /* greenPaths-100 */
+  background: #32d774; 
+  width: 15px;
+  height: 15px;
 }
 
 

@@ -23,9 +23,8 @@ export default function CaseCard({
       onClick={onClick}
       className="group w-full h-full text-left cursor-pointer"
     >
-      <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_10px_40px_rgba(0,0,0,0.25)]">
+      <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-white">
         
-        {/* imagem */}
         <div className="relative aspect-[4/3] w-full">
           <Image
             src={image}
