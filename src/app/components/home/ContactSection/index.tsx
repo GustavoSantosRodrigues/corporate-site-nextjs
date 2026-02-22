@@ -8,19 +8,16 @@ export default function ContactSection() {
    <section className="relative bg-white py-24">
       <div className="container relative mx-auto grid items-center gap-12 px-4 lg:grid-cols-2">
 
-        {/* LADO ESQUERDO */}
         <div className="relative">
-
-          {/* AVIÃO SOBREPOSTO */}
+          
           <Image
             src={images.aviaoPapel}
             alt="avião de papel"
-            className="pointer-events-none absolute -top-80 left-[70%] -translate-x-1/2 opacity-90 z-50"
+            className="pointer-events-none absolute -top-60 left-[70%] -translate-x-1/2 opacity-90 z-50"
             priority
           />
 
-          {/* título */}
-          <h2 className="text-4xl font-extrabold leading-tight md:text-5xl">
+          <h2 className="xl:text-8xl md:text-6xl text-4xl font-extrabold">
             <span className="text-purple-600">COMUNICAÇÃO</span>
             <br />
             <span className="text-black">É O NOSSO NEGÓCIO.</span>
@@ -31,7 +28,6 @@ export default function ContactSection() {
           </p>     
         </div>
 
-        {/* LADO DIREITO — FORM */}
         <div className="mx-auto w-full max-w-md rounded-lg border border-black/10 bg-white p-6 shadow-lg">
 
           <form className="space-y-4">
@@ -74,7 +70,7 @@ export default function ContactSection() {
 
             <button
               type="submit"
-              className="mt-4 w-full rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 py-3 font-semibold text-white transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+              className="cursor-pointer mt-4 w-full rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 py-3 font-semibold text-white transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
             >
               Enviar
             </button>
