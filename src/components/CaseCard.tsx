@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { images } from "@/app/assets/images";
-import image from "next/image";
+import { images } from "@/assets/images";
 
 type CaseCardProps = {
     title: string;

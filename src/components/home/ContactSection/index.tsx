@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { images } from "@/app/assets/images";
+import { images } from "@/assets/images";
 
 export default function ContactSection() {
   return (

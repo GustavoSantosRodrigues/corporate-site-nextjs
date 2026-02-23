@@ -10,8 +10,8 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import swiperLeft from "@/app/assets/images/swiper-left.png";
-import swiperRight from "@/app/assets/images/swiper-right.png";
+import swiperLeft from "@/assets/images/swiper-left.png";
+import swiperRight from "@/assets/images/swiper-right.png";
 
 type Slide = {
   id: string;

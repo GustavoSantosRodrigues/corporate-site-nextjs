@@ -1,11 +1,7 @@
 "use client";
-
-import { images } from "@/app/assets/images";
-import CaseCard from "../../CaseCard";
-import ServicesCarousel from "../../ServicesCarousel";
-import { ButtonDefault } from "../../ui";
-import type { StaticImageData } from "next/image";
-import ButtonOutlinePurple from "../../ui/buttonOutlinePurple/buttonOutline";
+import { images } from "@/assets/images";
+import CaseCard from "@/components/CaseCard";
+import { StaticImageData } from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -55,54 +51,29 @@ const cases: CaseItem[] = [
     image: images.oxitecCard,
   },
 ];
-
-export default function ProjectsShowcaseSection() {
+export default function CasesPage() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="h-[71%] bg-black" />
-        <div className="h-[29%] bg-[#7C3AED]" />
+    <section >
+      <div className="relative w-full h-screen flex items-center justify-center text-center px-6 bg-black bg-no-repeat bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${images.bannerCases.src})`,
+        }}>
+        <div className="md:pt-56 pt-32">
+          <h1 className="text-5xl md:text-6xl xl:text-9xl font-extrabold tracking-tight">
+            <span className="text-white">NOSSOS </span>
+            <span className="text-green-500">CASES</span>
+          </h1>
+
+          <p className="mt-6 max-w-5xl md:text-3xl text-xl text-white">
+            Transformamos cada evento, campanha e estratégia em oportunidades
+            para você marcar presença e se destacar com autenticidade no mercado.
+          </p>
+        </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-130 w-245 -translate-x-1/2 rounded-full bg-purple-600/20 blur-[140px]" />
-        <div className="absolute left-1/2 top-95 h-130 w-245 -translate-x-1/2 rounded-full bg-emerald-500/10 blur-[160px]" />
-      </div>
-
-      <div className="container relative">
-        <div className="px-4 py-16">
-          <div className="mx-auto w-full text-center">
-            <p className="font-medium 3xl:text-4xl xl:text-2xl text-xl tracking-wide text-white/90 pb-16">
-              Temos o orgulho de atender as maiores empresas do Brasil em diversos segmentos.
-              Oferecemos um amplo portfólio que se aplica a qualquer necessidade de comunicação.
-            </p>
-          </div>
-
-          <ServicesCarousel />
-
-          <div className="flex justify-center my-16">
-            <ButtonDefault className="cursor-pointer" href="#">
-              Ver Cases
-            </ButtonDefault>
-          </div>
-
-          <div className="mx-auto text-center">
-            <h2 className="text-3xl font-extrabold tracking-tight text-white xl:text-8xl md:text-6xl">
-              GRANDES PROJETOS
-              <br />
-              <span className="text-greenPaths-100">MARCAM A NOSSA</span>
-              <br />
-              <span className="text-greenPaths-100">TRAJETÓRIA</span>
-            </h2>
-
-            <p className="mx-auto mt-6 md:text-3xl text-xl   text-white font-medium">
-              Na nossa comunicação, cada projeto é conduzido com dedicação e expertise, refletindo o empenho
-              de uma equipe apaixonada pelo que faz. Com foco na qualidade de cada entrega, transformamos
-              desafios em resultados surpreendentes.
-            </p>
-          </div>
-
-          <div className="hidden xl:block">
+      <div className="bg-purplePaths-100 mx-auto px-6 md:py-16 py-10">
+        <div className="container ">
+          <div className="hidden xl:block ">
             <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
               {Array.isArray(cases) && cases.map((item) => (
                 <CaseCard
@@ -145,14 +116,10 @@ export default function ProjectsShowcaseSection() {
               ))}
             </Swiper>
           </div>
-
-          <div className="flex justify-center mt-16">
-            <ButtonOutlinePurple href="/cases">
-              Ir para página de cases
-            </ButtonOutlinePurple>
-          </div>
         </div>
       </div>
     </section>
+
+
   );
 }
