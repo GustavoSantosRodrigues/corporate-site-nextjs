@@ -21,13 +21,12 @@ export const metadata = {
 
   openGraph: {
     title: "Base3 — Comunicação, Marketing e Eventos",
-    description:
-      "Transformamos estratégias em presença de marca com criatividade, dados e execução completa.",
+    description: "Transformamos estratégias em presença de marca com criatividade, dados e execução completa.",
     url: "https://corporate-site-nextjs-two.vercel.app/",
     siteName: "Base3",
     images: [
       {
-        url: "/og-base3.png",
+        url: "https://corporate-site-nextjs-two.vercel.app/og-base3.png",
         width: 1200,
         height: 630,
         alt: "Base3 Agência",
@@ -36,13 +35,11 @@ export const metadata = {
     locale: "pt_BR",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Base3 — Comunicação, Marketing e Eventos",
-    description:
-      "Branding, marketing e eventos com estratégia e execução completa.",
-    images: ["/og-base3.png"],
+    description: "Branding, marketing e eventos com estratégia e execução completa.",
+    images: ["https://corporate-site-nextjs-two.vercel.app/og-base3.png"],
   },
 };
 
