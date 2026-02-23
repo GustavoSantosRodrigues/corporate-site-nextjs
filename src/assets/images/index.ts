@@ -82,9 +82,13 @@ import michelinCard from "./michelin-card.png"
 import oxitecCard from "./OxitecCard.png"
 import cipatexCard from "./CipatexCard.png"
 import fagronCard from "./fagronCard.png"
+import michelinBanner from "./michelin_banner_banner.png"
+import bannerMichelinConnected from "./banner-michelin-connected.png"
 
 
 export const images = {
+    michelinBanner,
+    bannerMichelinConnected,
     card3m,
     michelinCard,
     oxitecCard,
