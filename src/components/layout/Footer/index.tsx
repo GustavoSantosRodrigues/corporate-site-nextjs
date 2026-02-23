@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
-import { images } from "@/app/assets/images";
+import { images } from "@/assets/images";
 
 export default function Footer() {
     return (

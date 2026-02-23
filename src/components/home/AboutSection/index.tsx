@@ -1,4 +1,4 @@
-import { ButtonDefault } from "@/app/components/ui";
+import { ButtonDefault } from "@/components/ui";
 
 
 export default function AboutSection() {

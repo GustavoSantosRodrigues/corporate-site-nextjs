@@ -6,7 +6,7 @@ import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
-import { images } from "@/app/assets/images";
+import { images } from "@/assets/images";
 
 const logos = [
   { id: "3m", src: images.img3M, alt: "3M" },

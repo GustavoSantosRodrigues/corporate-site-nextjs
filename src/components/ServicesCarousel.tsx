@@ -6,10 +6,10 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 
-import swiperLeft from "@/app/assets/images/swiper-left.png";
-import swiperRight from "@/app/assets/images/swiper-right.png";
+import swiperLeft from "@/assets/images/swiper-left.png";
+import swiperRight from "@/assets/images/swiper-right.png";
 import Image, { StaticImageData } from "next/image";
-import { images } from "@/app/assets/images";
+import { images } from "@/assets/images";
 
 type ServiceItem = {
     title: string;
