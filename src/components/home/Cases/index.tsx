@@ -149,9 +149,7 @@ export default function ProjectsShowcaseSection() {
           </div>
 
           <div className="flex justify-center mt-16">
-            <ButtonOutlinePurple href="/cases">
-              Ir para página de cases
-            </ButtonOutlinePurple>
+            <ButtonOutlinePurple href="/cases" title="Ir para página de cases" />
           </div>
         </div>
       </div>

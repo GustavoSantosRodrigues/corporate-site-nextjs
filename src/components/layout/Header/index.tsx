@@ -30,7 +30,7 @@ export default function Header() {
             <div className="h-[100px] 3xl:h-[129px]" />
                 <header className="fixed top-0 left-0 z-50 w-full bg-white/90 shadow-md backdrop-blur">
                     <div className="container">
-                        <div className="flex items-center justify-between py-10 md:py-10">
+                        <div className="flex items-center justify-between py-10 md:py-10 pr-2">
 
                             <Link href="/" className="flex items-center">
                                 <Image
@@ -43,8 +43,8 @@ export default function Header() {
 
 
                             {/* Desktop */}
-                            <div className="hidden md:flex items-center gap-14">
-                                <nav className="flex items-center gap-12 text-xl font-medium text-black">
+                            <div className="hidden md:flex items-center gap-10">
+                                <nav className="flex items-center gap-8 text-xl font-medium text-black px-2">
                                     <Link
                                         href="/cases"
                                         className="inline-block transition-transform duration-300 ease-out hover:scale-105 hover:text-purplePaths-100"

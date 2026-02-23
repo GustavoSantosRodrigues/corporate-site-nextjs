@@ -14,12 +14,12 @@ export default function CaseHero({ banner, title, subtitle }: Props) {
 
       <div className="relative z-10 flex h-full items-center">
         <div className="container mx-auto px-6">
-          <h1 className="uppercase font-ArtegraSans font-black xl:text-7xl md:text-6xl text-4xl text-white">
+          <h1 className="uppercase font-black xl:text-7xl md:text-6xl text-4xl text-white">
             {title.split(" ").slice(0, 2).join(" ")} <br />
             {title.split(" ").slice(2).join(" ")}
           </h1>
 
-          <p className="font-poppins xl:text-7xl md:text-6xl text-4xl font-semibold text-greenPaths-100">
+          <p className="font-semibold xl:text-7xl md:text-6xl text-4xl text-greenPaths-100">
             {subtitle}
           </p>
         </div>

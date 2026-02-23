@@ -1,32 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { ButtonHTMLAttributes, ReactNode } from "react";
 
 type Props = {
-  children: ReactNode;
-  href?: string;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+  title: string;
+  href: string;
+};
 
-export default function ButtonOutlinePurple({
-  children,
-  href,
-  ...props
-}: Props) {
+export default function ButtonOutlinePurple({ title, href }: Props) {
   const base =
-    "inline-flex transition-transform duration-300 hover:scale-105 items-center justify-center rounded-full border border-white/80 px-8 py-4 text-lg font-medium text-white transition-all duration-300 hover:bg-white hover:text-purple-700";
-
-  if (href) {
-    return (
-      <Link href={href} className={base}>
-        {children}
-      </Link>
-    );
-  }
+    "inline-flex items-center justify-center rounded-full border border-purplePaths-100 px-8 py-4 text-lg font-medium text-purplePaths-100 transition-all duration-300 hover:bg-purplePaths-100 hover:text-white hover:scale-105";
 
   return (
-    <button className={base} {...props}>
-      {children}
-    </button>
+    <Link href={href} className={base}>
+      {title}
+    </Link>
   );
 }
