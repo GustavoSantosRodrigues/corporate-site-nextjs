@@ -13,7 +13,7 @@ import { images } from "@/assets/images";
 export default function Footer() {
     return (
         <>
-            <footer className="bg-white pt-16 pb-12">
+            <footer className="bg-white pt-16 md:pb-12 pb-2">
                 <div className="container mx-auto px-6">
                     <div className="mb-12 h-0.5 w-full bg-black" />
 

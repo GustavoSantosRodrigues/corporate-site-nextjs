@@ -14,7 +14,7 @@ type Props = {
 
 export default function CaseBigGallery({ images }: Props) {
   return (
-    <section className="relative w-full overflow-hidden bg-[#07040e] pb-24">
+    <section className="relative w-full overflow-hidden bg-[#07040e] md:pb-24 pb-5">
       <div className="relative mx-auto w-full max-w-6xl px-4">
 
         <button className="cursor-pointer hover:scale-110 transition-transform swiper-left absolute -left-15 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 xl:flex items-center justify-center">
@@ -33,12 +33,13 @@ export default function CaseBigGallery({ images }: Props) {
             nextEl: ".swiper-right",
           }}
           autoplay={{
-            delay: 2500,
+            delay: 3200,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
           speed={900}
           slidesPerView={1}
+          spaceBetween={50}
         >
           {images.map((img, idx) => (
             <SwiperSlide key={idx}>

@@ -30,7 +30,12 @@ export default function CaseOverview({ title, highlight, description, bullets, s
       </div>
 
       <div className="xl:w-6/12 w-full">
-        <Image src={sideImage} alt="Imagem do case" priority className="max-w-full h-auto" />
+        <Image
+          src={sideImage}
+          alt="Imagem do case"
+          priority
+          className="w-full h-auto xl:block hidden xl:max-w-full mx-auto xl:mx-0"
+        />
       </div>
     </div>
   );

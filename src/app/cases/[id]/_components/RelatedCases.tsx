@@ -71,9 +71,9 @@ export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
                 </div>
 
             </div>
-            <ButtonOutlinePurple href="/cases">
-                Ir para página de cases
-            </ButtonOutlinePurple>
+            <div className="flex justify-center mt-16">
+                <ButtonOutlinePurple href="/cases" title="Ir para página de cases" />
+            </div>
         </>
     );
 }

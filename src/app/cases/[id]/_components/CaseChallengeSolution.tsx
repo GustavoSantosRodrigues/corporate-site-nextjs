@@ -19,11 +19,11 @@ function Card({ item }: { item: Item }) {
         <div className="relative flex h-full flex-col items-center text-center px-6 py-14">
             {item.icon && <div className="mb-6">{item.icon}</div>}
 
-            <h3 className="font-ArtegraSans font-black uppercase text-white xl:text-6xl md:text-5xl text-4xl">
+            <h3 className="font-black uppercase text-white xl:text-6xl md:text-5xl text-4xl">
                 {item.title}
             </h3>
 
-            <p className="mt-6 max-w-md font-poppins font-semibold text-white/90 md:text-lg text-base leading-relaxed">
+            <p className="mt-6 max-w-md font-semibold text-white/90 md:text-lg text-base leading-relaxed">
                 {item.text}
             </p>
         </div>
@@ -34,14 +34,14 @@ export default function CaseChallengeSolution({ items }: Props) {
     const desktopIsSwiper = items.length > 3;
 
     return (
-        <section className="relative w-full overflow-hidden bg-[#07040e] py-20">
+        <section className="relative w-full overflow-hidden bg-[#07040e] md:py-20 py-2">
             <div className="xl:hidden">
                 {/* MOBILE/TABLET*/}
                 <Swiper
                     modules={[Autoplay]}
                     loop={true}
                     autoplay={{
-                        delay: 1500,
+                        delay: 2500,
                         disableOnInteraction: false,
                         pauseOnMouseEnter: false,
                         waitForTransition: false,
@@ -64,7 +64,7 @@ export default function CaseChallengeSolution({ items }: Props) {
                     <Swiper
                         modules={[Autoplay]}
                         loop
-                        autoplay={{ delay: 1500, disableOnInteraction: false }}
+                        autoplay={{ delay: 2500, disableOnInteraction: false }}
                         speed={800}
                         spaceBetween={32}
                         slidesPerView={3}
