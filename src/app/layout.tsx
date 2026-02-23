@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "Base3",
     images: [
       {
-        url: "/BASE3-BLACK.png",
+        url: "og-base3.png",
         width: 1200,
         height: 630,
         alt: "Base3 Agência",
@@ -42,7 +42,7 @@ export const metadata = {
     title: "Base3 — Comunicação, Marketing e Eventos",
     description:
       "Branding, marketing e eventos com estratégia e execução completa.",
-    images: ["/BASE3-BLACK.png"],
+    images: ["og-base3.png"],
   },
 };
 
