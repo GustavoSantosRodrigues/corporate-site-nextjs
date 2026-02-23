@@ -87,7 +87,6 @@ export default function HomeHeroSwiper() {
                     className="mt-5 flex items-center font-poppins text-sm text-greenPaths-100 underline underline-offset-8 transition-all duration-300 hover:text-white hover:underline hover:underline-offset-4 md:text-2xl xl:mt-10"
                   >
                     {slide.cta}
-                    <span className="text-2xl leading-none">↓</span>
                   </Link>
                 </div>
               </div>
