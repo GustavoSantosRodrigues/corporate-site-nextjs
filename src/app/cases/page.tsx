@@ -82,6 +82,7 @@ export default function CasesPage() {
                   subtitle={item.subtitle}
                   description={item.description}
                   image={item.image}
+                  href={`/cases/${item.id}`}
                 />
               ))}
             </div>
@@ -110,6 +111,7 @@ export default function CasesPage() {
                       subtitle={item.subtitle}
                       description={item.description}
                       image={item.image}
+                      href={`/cases/${item.id}`}
                     />
                   </div>
                 </SwiperSlide>

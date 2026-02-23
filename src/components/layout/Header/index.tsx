@@ -47,21 +47,21 @@ export default function Header() {
                                 <nav className="flex items-center gap-12 text-xl font-medium text-black">
                                     <Link
                                         href="/cases"
-                                        className="inline-block transition-transform transition-colors duration-300 ease-out hover:scale-105 hover:text-purplePaths-100"
+                                        className="inline-block transition-transform duration-300 ease-out hover:scale-105 hover:text-purplePaths-100"
                                     >
                                         Cases
                                     </Link>
 
                                     <Link
                                         href="/sobre"
-                                        className="inline-block transition-transform transition-colors duration-300 ease-out hover:scale-105 hover:text-purplePaths-100"
+                                        className="inline-block transition-transform duration-300 ease-out hover:scale-105 hover:text-purplePaths-100"
                                     >
                                         Sobre
                                     </Link>
 
                                     <Link
                                         href="/contatos"
-                                        className="inline-block transition-transform transition-colors duration-300 ease-out hover:scale-105 hover:text-purplePaths-100"
+                                        className="inline-block transition-colors duration-300 ease-out hover:scale-105 hover:text-purplePaths-100"
                                     >
                                         Contatos
                                     </Link>

@@ -1,12 +1,15 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
 import { images } from "@/assets/images";
+import Link from "next/link";
 
 type CaseCardProps = {
     title: string;
     subtitle?: string;
     description?: string;
     image: StaticImageData;
-    onClick?: () => void;
+   href: string;
 };
 
 export default function CaseCard({
@@ -14,12 +17,11 @@ export default function CaseCard({
   subtitle,
   description = "Descrição do Case*",
   image,
-  onClick,
+  href,
 }: CaseCardProps) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
+    <Link
+      href={href}
       className="group w-full h-full text-left cursor-pointer"
     >
       <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-white">
@@ -53,6 +55,6 @@ export default function CaseCard({
           </p>
         </div>
       </div>
-    </button>
+    </Link>
   );
 }
