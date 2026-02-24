@@ -103,7 +103,7 @@ export default function AboutUs() {
             </p>
 
             <div className="mt-16 flex justify-center lg:justify-start">
-              <ButtonDefault href="/contato">Conheça a Base3</ButtonDefault>
+              <ButtonDefault href="/contact">Conheça a Base3</ButtonDefault>
             </div>
           </div>
 
