@@ -53,14 +53,14 @@ export default function Header() {
                                     </Link>
 
                                     <Link
-                                        href="/sobre"
+                                        href="/about-us"
                                         className="inline-block transition-transform duration-300 ease-out hover:scale-105 hover:text-purplePaths-100"
                                     >
                                         Sobre
                                     </Link>
 
                                     <Link
-                                        href="/contatos"
+                                        href="/contact"
                                         className="inline-block transition-colors duration-300 ease-out hover:scale-105 hover:text-purplePaths-100"
                                     >
                                         Contatos
