@@ -44,7 +44,7 @@
 }
 
 .hero-swiper .swiper-pagination-bullet-active {
-  background: #32d774; 
+  background: #32d774;
   width: 15px;
   height: 15px;
 }
@@ -78,3 +78,37 @@
 }
 
 
+/* swiper testimonials */
+
+.swiper-testimonials {
+  position: relative;
+  padding-bottom: 90px;
+}
+
+@media screen and (max-width: 425px) {
+  .swiper-testimonials {
+    padding-bottom: 20px !important;
+  }
+}
+
+.swiper-testimonials-pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -70px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.swiper-testimonials-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background: #000;
+}
+
+.swiper-testimonials-pagination .swiper-pagination-bullet-active {
+  background: #22c55e;
+}

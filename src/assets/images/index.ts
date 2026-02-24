@@ -84,11 +84,25 @@ import cipatexCard from "./CipatexCard.png"
 import fagronCard from "./fagronCard.png"
 import michelinBanner from "./michelin_banner_banner.png"
 import bannerMichelinConnected from "./banner-michelin-connected.png"
+import logoBase3Section from "./logo_base3_section.png"
+import equipeBase3 from "./equipe-base-3.png"
+import visita1 from "./visita-1.png"
+import visita2 from "./visita-2.png"
+import visita3 from "./visita-3.png"
+import visita4 from "./visita-4.png"
+import visita5 from "./visita-5.png"
 
 
 export const images = {
+    visita1,
+    visita2,
+    visita3,
+    visita4,
+    visita5,
     michelinBanner,
     bannerMichelinConnected,
+    logoBase3Section,
+    equipeBase3,
     card3m,
     michelinCard,
     oxitecCard,
