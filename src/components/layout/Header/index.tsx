@@ -104,7 +104,6 @@ export default function Header() {
                     <AnimatePresence>
                         {open && (
                             <>
-                                {/* Overlay */}
                                 <motion.button
                                     type="button"
                                     aria-label="Fechar menu"
@@ -115,7 +114,6 @@ export default function Header() {
                                     exit={{ opacity: 0 }}
                                 />
 
-                                {/* Painel */}
                                 <motion.aside
                                     className="fixed right-0 top-0 z-50 h-dvh w-[78%] max-w-[360px] bg-white shadow-2xl"
                                     initial={{ x: "100%" }}
@@ -124,9 +122,7 @@ export default function Header() {
                                     transition={{ type: "tween", duration: 0.25 }}
                                 >
                                     <div className="flex items-start justify-between px-8 pt-10">
-                                        <span className="text-sm font-medium text-black/50">
-                                            {/* opcional: título */}
-                                        </span>
+                                        <span className="text-sm font-medium text-black/50"></span>
 
                                         <button
                                             type="button"
@@ -145,12 +141,12 @@ export default function Header() {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/sobre" onClick={() => setOpen(false)}>
+                                                <Link href="/about-us" onClick={() => setOpen(false)}>
                                                     Sobre
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/contatos" onClick={() => setOpen(false)}>
+                                                <Link href="/contact" onClick={() => setOpen(false)}>
                                                     Contatos
                                                 </Link>
                                             </li>
