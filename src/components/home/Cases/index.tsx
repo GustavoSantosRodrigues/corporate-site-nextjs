@@ -5,10 +5,10 @@ import CaseCard from "../../CaseCard";
 import ServicesCarousel from "../../ServicesCarousel";
 import { ButtonDefault } from "../../ui";
 import type { StaticImageData } from "next/image";
-import ButtonOutlinePurple from "../../ui/buttonOutlinePurple/buttonOutline";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import BorderButton from "@/components/ui/borderButton/BorderButton";
 
 type CaseItem = {
   id: string;
@@ -81,7 +81,7 @@ export default function ProjectsShowcaseSection() {
           <ServicesCarousel />
 
           <div className="flex justify-center my-16">
-            <ButtonDefault className="cursor-pointer" href="#">
+            <ButtonDefault className="cursor-pointer" href="/cases">
               Ver Cases
             </ButtonDefault>
           </div>
@@ -149,7 +149,7 @@ export default function ProjectsShowcaseSection() {
           </div>
 
           <div className="flex justify-center mt-16">
-            <ButtonOutlinePurple href="/cases" title="Ir para página de cases" />
+          <BorderButton href="/cases" title="Ver Cases" />
           </div>
         </div>
       </div>

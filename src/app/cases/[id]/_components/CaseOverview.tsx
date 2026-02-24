@@ -1,19 +1,38 @@
 import Image from "next/image";
-import BorderButton from "@/components/ui/borderButton/BorderButton";
-
 type Props = {
   title: string;
   highlight: string;
   description: string;
   bullets: string[];
   sideImage: any;
+  tags: string[];
 };
 
-export default function CaseOverview({ title, highlight, description, bullets, sideImage }: Props) {
+
+
+export default function CaseOverview({ title, highlight, description, bullets, sideImage, tags }: Props) {
   return (
     <div className="container mx-auto flex xl:flex-row flex-col justify-between gap-12 py-20">
       <div className="xl:w-6/12 w-full">
-        <BorderButton />
+
+        <ul className="flex flex-wrap gap-2">
+          {Array.isArray(tags) && tags.map((tag) => (
+            <li
+              className="
+            border border-purplePaths-100
+            text-black font-semibold uppercase
+            px-6 py-3 rounded-full
+            text-sm md:text-base
+            whitespace-nowrap
+            hover:bg-purplePaths-100
+            transition-colors
+            hover:text-white
+            duration-300
+          ">
+            {tag}
+          </li>
+          ))}
+        </ul>
 
         <h2 className="mt-6 xl:text-7xl md:text-4xl text-xl font-black">
           {title} <br />

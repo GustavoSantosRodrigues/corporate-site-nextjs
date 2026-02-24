@@ -128,6 +128,7 @@ export default async function CaseDetail
                 description={data.description}
                 bullets={data.bullets}
                 sideImage={data.sideImage}
+                tags={["Produção de eventos", "Branding"]}
             />
             <CaseChallengeSolution items={items} />
             <CaseBigGallery images={gallery} />
