@@ -28,7 +28,7 @@ const slides: Slide[] = [
     titleTop: "UMA AGÊNCIA 360°",
     titleGreen: "COMUNICAÇÃO, MARKETING E EVENTOS",
     subtitle: "Um time completo para te atender do início ao fim do projeto.",
-    cta: "Clique e veja a galeria de cases",
+    cta: "Clique e veja a galeria de cases →",
     href: "/cases",
   },
   {
@@ -36,16 +36,8 @@ const slides: Slide[] = [
     titleTop: "ESTRATÉGIA E CRIAÇÃO",
     titleGreen: "BRANDING, CAMPANHAS E CONTEÚDO",
     subtitle: "Criamos experiências completas com consistência e performance.",
-    cta: "Veja nossos serviços",
-    href: "/sobre",
-  },
-  {
-    id: "s3", 
-    titleTop: "PRODUÇÃO E ATIVAÇÕES",
-    titleGreen: "EVENTOS, STANDS E EXPERIÊNCIAS",
-    subtitle: "Do planejamento ao pós-evento: execução completa com qualidade.",
-    cta: "Ver projetos",
-    href: "/projetos",
+    cta: "Veja nossos serviços →",
+    href: "/about-us",
   },
 ];
 
