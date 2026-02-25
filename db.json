@@ -1,0 +1,76 @@
+{
+    "cases": [
+        {
+            "id": 1,
+            "slug": "michelin-connected-fleet",
+            "category": "eventos",
+            "isFeatured": true,
+            "orderFeatured": 1,
+            "card": {
+                "title": "MICHELIN CONNECTED FLEET FENATRAN 2024 | TRANSPOSUL 2025",
+                "subtitle": "TRANSPOSUL 2025",
+                "description": "Estande, ativações, cobertura e gestão",
+                "coverImage": "/images/michelin-card.png"
+            },
+            "hero": {
+                "bannerImage": "/images/banner-michelin-connected.png",
+                "title": "MICHELIN CONNECTED FLEET",
+                "highlight": "Transposul 2025",
+                "description": "Gestão completa da participação da Michelin Connected Fleet..."
+            },
+            "sections": [
+                {
+                    "type": "overview",
+                    "chips": [
+                        "PRODUÇÃO DE EVENTOS",
+                        "BRANDING"
+                    ],
+                    "bullets": [
+                        "Longas para estande",
+                        "Totens com vídeos interativos",
+                        "Conteúdo para tablets",
+                        "Gestão do evento",
+                        "Criação de materiais"
+                    ],
+                    "image": "/images/mao-case.png"
+                },
+                {
+                    "type": "triple",
+                    "items": [
+                        {
+                            "icon": "/images/solução.png",
+                            "title": "SOLUÇÃO",
+                            "text": "Da concepção à execução..."
+                        },
+                        {
+                            "icon": "/images/objetivo.png",
+                            "title": "DESAFIO",
+                            "text": "Precisava marcar presença de forma estratégica..."
+                        },
+                        {
+                            "icon": "/images/desafio.png",
+                            "title": "SOLUÇÃO",
+                            "text": "Da concepção à execução..."
+                        }
+                    ],
+                    "bigTitle": "TECNOLOGIA E PRESENÇA ESTRATÉGICA EM MOVIMENTO"
+                }
+            ],
+            "swipers": {
+                "brand": {
+                    "title": "Sobre a marca",
+                    "items": [
+                        {
+                            "title": "Michelin",
+                            "image": "/images/banner-michelin-connected.png"
+                        },
+                        {
+                            "title": "Estande",
+                            "image": "/images/banner-michelin-connected.png"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
