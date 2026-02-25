@@ -5,6 +5,19 @@ import { StaticImageData } from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { useMemo, useState } from "react";
+import { Target, CalendarDays, Megaphone, BadgeCheck, Smartphone, MonitorSpeaker } from "lucide-react";
+
+type CategoryKey = "all" | "planejamento" | "eventos" | "campanhas" | "branding" | "digital";
+
+const categories: { key: CategoryKey; label: string; icon: React.ElementType }[] = [
+  { key: "all", label: "Todos", icon: Target },
+  { key: "planejamento", label: "Planejamento", icon: Target },
+  { key: "eventos", label: "Eventos", icon: CalendarDays },
+  { key: "campanhas", label: "Campanhas", icon: Megaphone },
+  { key: "branding", label: "Branding", icon: BadgeCheck },
+  { key: "digital", label: "Digital", icon: Smartphone },
+];
 
 type CaseItem = {
   id: string;
@@ -52,6 +65,15 @@ const cases: CaseItem[] = [
   },
 ];
 export default function CasesPage() {
+
+  const [activeCategory, setActiveCategory] = useState<CategoryKey>("all");
+
+  const filteredCases = useMemo(() => {
+    if (activeCategory === "all") return cases;
+    return cases.filter((c: any) => c.category === activeCategory);
+  }, [activeCategory]);
+
+
   return (
     <section >
       <div className="relative w-full h-screen flex items-center justify-center text-center px-6 bg-black bg-no-repeat bg-cover bg-center"
@@ -68,6 +90,31 @@ export default function CasesPage() {
             Transformamos cada evento, campanha e estratégia em oportunidades
             para você marcar presença e se destacar com autenticidade no mercado.
           </p>
+        </div>
+      </div>
+
+      <div className="bg-purplePaths-100">
+        <div className="container mx-auto px-6 py-5">
+          <div className="flex items-center gap-3 overflow-x-auto whitespace-nowrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {categories.map(({ key, label, icon: Icon }) => {
+              const isActive = activeCategory === key;
+              return (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => setActiveCategory(key)}
+                  className={[
+                    "inline-flex items-center gap-2 rounded-full border px-5 py-2 text-sm font-semibold transition-all",
+                    "hover:bg-white/10",
+                    isActive ? "bg-white text-black border-white" : "text-white border-white/25",
+                  ].join(" ")}
+                >
+                  <Icon size={16} />
+                  {label}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
 
@@ -121,7 +168,5 @@ export default function CasesPage() {
         </div>
       </div>
     </section>
-
-
   );
 }
