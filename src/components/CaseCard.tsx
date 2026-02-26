@@ -4,12 +4,13 @@ import Image, { StaticImageData } from "next/image";
 import { images } from "@/assets/images";
 import Link from "next/link";
 
+
 type CaseCardProps = {
-    title: string;
-    subtitle?: string;
-    description?: string;
-    image: StaticImageData;
-   href: string;
+  title: string;
+  subtitle?: string;
+  description?: string;
+  image: string | StaticImageData;
+  href: string;
 };
 
 export default function CaseCard({
@@ -25,7 +26,7 @@ export default function CaseCard({
       className="group w-full h-full text-left cursor-pointer"
     >
       <div className="flex h-full flex-col overflow-hidden rounded-2xl bg-white">
-        
+
         <div className="relative aspect-[4/3] w-full">
           <Image
             src={image}

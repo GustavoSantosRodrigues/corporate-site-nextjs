@@ -1,62 +1,55 @@
 "use client";
 
-import { images } from "@/assets/images";
 import CaseCard from "../../CaseCard";
 import ServicesCarousel from "../../ServicesCarousel";
 import { ButtonDefault } from "../../ui";
-import type { StaticImageData } from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import BorderButton from "@/components/ui/borderButton/BorderButton";
+import { useEffect, useState } from "react";
+import { getFeaturedCases } from "@/services/casesService";
+import { z } from "zod";
 
-type CaseItem = {
-  id: string;
-  title: string;
-  subtitle?: string;
-  description?: string;
-  image: StaticImageData;
-};
+const CaseApiItemSchema = z.object({
+  id: z.number(),
+  slug: z.string(),
+  categories: z.array(z.object({
+    key: z.string(),
+    label: z.string(),
+    images_category: z.string(),
+  })),
+  isFeatured: z.boolean(),
+  orderFeatured: z.number().optional(),
 
-const cases: CaseItem[] = [
-  {
-    id: "michelin",
-    title: "Michelin connected fleet fenatran 2024",
-    subtitle: "TRANSPOSUL 2025",
-    description: "Estande, ativações, cobertura e gestão",
-    image: images.michelinCard,
-  },
-  {
-    id: "3m",
-    title: "3M | Ambientação CIC",
-    subtitle: "2025",
-    description: "Estande, ativações, cobertura e gestão",
-    image: images.card3m,
-  },
-  {
-    id: "cipatex",
-    title: "Cipatex | Ambientação CIC",
-    subtitle: "2025",
-    description: "Conceito de coleção",
-    image: images.cipatexCard,
-  },
-  {
-    id: "fagron",
-    title: "Fagron | We for her",
-    subtitle: "2025",
-    description: "Campanha de reposicionamento",
-    image: images.fagronCard,
-  },
-  {
-    id: "oxitec",
-    title: "Oxitec | Spodoptera do bem",
-    subtitle: "2025",
-    description: "Branding/Design de embalagem",
-    image: images.oxitecCard,
-  },
-];
+  card: z.object({
+    title: z.string(),
+    subtitle: z.string().optional(),
+    description: z.string().optional(),
+    image: z.string(),
+  }),
+}); 
+
+export type CaseApiItem = z.infer<typeof CaseApiItemSchema>;
 
 export default function ProjectsShowcaseSection() {
+
+  const [cases, setCases] = useState<CaseApiItem[]>([]);
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const data = await getFeaturedCases();
+        // console.log("Raw data:", data);
+        setCases(data);
+        // console.log("Cases loaded:", data);
+      } catch (error) {
+        console.error("Error loading cases:", error);
+      }
+    };
+    load();
+  }, [])
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
@@ -106,12 +99,12 @@ export default function ProjectsShowcaseSection() {
             <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
               {Array.isArray(cases) && cases.map((item) => (
                 <CaseCard
-                  href={`/cases/${item.id}`}
                   key={item.id}
-                  title={item.title}
-                  subtitle={item.subtitle}
-                  description={item.description}
-                  image={item.image}
+                  href={`/cases/${item.slug}`}
+                  title={item.card.title}
+                  subtitle={item.card.subtitle}
+                  description={item.card.description}
+                  image={item.card.image}
                 />
               ))}
             </div>
@@ -136,11 +129,11 @@ export default function ProjectsShowcaseSection() {
                 <SwiperSlide key={item.id} className="h-auto">
                   <div className="h-full">
                     <CaseCard
-                      href={`/cases/${item.id}`}
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      description={item.description}
-                      image={item.image}
+                      href={`/cases/${item.slug}`}
+                      title={item.card.title}
+                      subtitle={item.card.subtitle}
+                      description={item.card.description}
+                      image={item.card.image}
                     />
                   </div>
                 </SwiperSlide>
@@ -149,7 +142,7 @@ export default function ProjectsShowcaseSection() {
           </div>
 
           <div className="flex justify-center mt-16">
-          <BorderButton href="/cases" title="Ver Cases" />
+            <BorderButton href="/cases" title="Ver Cases" />
           </div>
         </div>
       </div>
