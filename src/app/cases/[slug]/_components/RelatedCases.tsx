@@ -7,14 +7,14 @@ import "swiper/css";
 import ButtonOutlinePurple from "@/components/ui/buttonOutlinePurple/buttonOutline";
 
 type CaseItem = {
-  id: number;
-  slug: string;
-  card: {
-    title: string;
-    subtitle?: string;
-    description?: string;
-    image: string;
-  };
+    id: number;
+    slug: string;
+    card: {
+        title: string;
+        subtitle?: string;
+        description?: string;
+        image: string;
+    };
 };
 
 export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
@@ -24,6 +24,12 @@ export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
         <>
             <div className="bg-purplePaths-100 py-10">
                 <div className="container">
+                    <div className="xl:py-10 py-5">
+                        <h2 className="font-black text-white 3xl:text-7xl xl:text-5xl md:text-4xl text-2xl text-center uppercase 3xl:leading-tight">
+                            <span className="text-greenPaths-100">Cases semelhantes</span> {" "}
+                            para inspirar seu próximo passo
+                        </h2>
+                    </div>
                     {/* Desktop grid */}
                     <div className="hidden xl:block">
                         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">

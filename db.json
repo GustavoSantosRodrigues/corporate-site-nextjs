@@ -81,42 +81,46 @@
         },
         {
             "id": 2,
-            "slug": "teste",
+            "slug": "cipatex-inpulse",
             "categories": [
                 {
                     "key": "planejamento",
                     "label": "Planejamento",
                     "images_category": "/images/planejamento.png"
+                },
+                {
+                    "key": "eventos",
+                    "label": "Eventos",
+                    "images_category": "/images/eventos.png"
                 }
             ],
 
             "isFeatured": true,
-            "orderFeatured": 1,
+            "orderFeatured": 2,
             "card": {
-                "title": "Teste",
-                "subtitle": "Teste",
-                "description": "Teste",
+                "title": "Cipatex Inpulse",
+                "subtitle": "Conceito de coleção",
+                "description": "Cipatex Inpulse - Conceito de coleção",
                 "image": "/images/michelin-card.png"
             },
             "hero": {
-                "bannerImage": "/images/banner-michelin-connected.png",
-                "title": "MICHELIN CONNECTED FLEET",
-                "highlight": "Transposul 2025",
-                "description": "Gestão completa da participação da Michelin Connected Fleet..."
+                "bannerImage": "/images/banner-cipatex.png",
+                "title": "CIPATEX INPULSE",
+                "highlight": "Salão Inspira Mais 2025",
+                "description": "Gestão completa da participação da Cipatex Inpulse..."
             },
             "sections": [
                 {
                     "type": "overview",
                     "chips": [
-                        "PRODUÇÃO DE EVENTOS",
-                        "BRANDING"
+                        "Conceito de campanha",
+                        "Produção gráfica"
                     ],
                     "bullets": [
-                        "Longas para estande",
-                        "Totens com vídeos interativos",
-                        "Conteúdo para tablets",
-                        "Gestão do evento",
-                        "Criação de materiais"
+                        "Conceito criativo",
+                        "Produção gráfica",
+                        "Social media",
+                        "Evento"
                     ],
                     "image": "/images/mao-case.png"
                 },
@@ -124,35 +128,34 @@
                     "type": "triple",
                     "items": [
                         {
-                            "icon": "/images/solução.png",
+                            "icon": "/images/solucao.png",
                             "title": "SOLUÇÃO",
-                            "text": "Da concepção à execução..."
-                        },
-                        {
-                            "icon": "/images/objetivo.png",
-                            "title": "DESAFIO",
-                            "text": "Precisava marcar presença de forma estratégica..."
+                            "text": "Criar um visual e uma identidade verbal para a coleção Inpulse que traduzissem o conceito de movimento alinhado com a temática do movimento e nas cores para 2024. Trazer um visual impactante, transmitindo energia e inspiração, enquanto mantém uma abordagem inclusiva e diversificada, representando pessoas de diferentes idades e gêneros."
                         },
                         {
                             "icon": "/images/desafio.png",
-                            "title": "SOLUÇÃO",
-                            "text": "Da concepção à execução..."
+                            "title": "DESAFIO",
+                            "text": " O desafio foi unir, pulsar, inspirar e ditar tendências no conceito In.Pulse para a Cipatex no Salão Inspira Mais. Como líder em inovação têxtil, buscamos não só refletir, mas também impulsionar a evolução da moda e do design, transmitindo energia pulsante e inspiradora em cada textura e material apresentado"
                         }
                     ],
-                    "bigTitle": "TECNOLOGIA E PRESENÇA ESTRATÉGICA EM MOVIMENTO"
+                    "bigTitle": "Uma Campanha que impulsiona a moda"
                 }
             ],
             "swipers": {
                 "brand": {
-                    "title": "Sobre a marca",
+                    "title": "Uma Campanha que impulsiona a moda",
                     "items": [
                         {
-                            "title": "Michelin",
-                            "image": "/images/banner-michelin-connected.png"
+                            "title": "Cipatex",
+                            "image": "/images/cipatex-sobre.jpg"
                         },
                         {
-                            "title": "Estande",
-                            "image": "/images/banner-michelin-connected.png"
+                            "title": "Movimento",
+                            "image": "/images/movimento-cipatex.jpg"
+                        },
+                        {
+                            "title": "Posts",
+                            "image": "/images/posts-cipatex.jpg"
                         }
                     ]
                 }
