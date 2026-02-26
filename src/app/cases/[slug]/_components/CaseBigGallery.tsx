@@ -10,7 +10,7 @@ import swiperRight from "@/assets/images/swiper-right.png";
 
 type GalleryItem = {
   title: string;
-  image: string; // "/images/..."
+  image: string;
 };
 
 type Props = {
@@ -25,9 +25,14 @@ export default function CaseBigGallery({ title, items }: Props) {
     <section className="relative w-full overflow-hidden bg-[#07040e] md:pb-24 pb-5">
       <div className="relative mx-auto w-full max-w-6xl px-4">
         {title && (
-          <h2 className="mb-8 text-center text-2xl md:text-4xl font-black text-white">
-            {title}
-          </h2>
+          <div className="text-center xl:my-32 my-16 px-4">
+            <h2 className="text-white font-ArtegraSans font-black 3xl:text-[85px] 3xl:leading-tight lg:text-5xl text-3xl uppercase">
+              {title.split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="text-greenPaths-100">
+                {title.split(" ").slice(-1)}
+              </span>
+            </h2>
+          </div>
         )}
 
         <button className="cursor-pointer hover:scale-110 transition-transform swiper-left absolute -left-15 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 xl:flex items-center justify-center">

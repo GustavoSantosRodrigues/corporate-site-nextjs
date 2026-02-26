@@ -34,7 +34,7 @@ export default function CaseChallengeSolution({ items }: Props) {
     const desktopIsSwiper = items && items.length > 3;
 
     return (
-        <section className="relative w-full overflow-hidden bg-[#07040e] md:py-20 py-2">
+        <section className="relative w-full overflow-hidden bg-[#07040e] md:py-10 py-2">
             <div className="xl:hidden">
                 {/* MOBILE/TABLET*/}
                 <Swiper
@@ -89,12 +89,12 @@ export default function CaseChallengeSolution({ items }: Props) {
                 )}
             </div>
 
-            <div className="text-center xl:my-32 my-16 px-4">
+            {/* <div className="text-center xl:my-32 my-16 px-4">
                 <h2 className="text-white font-black 3xl:text-8xl lg:text-5xl text-3xl uppercase">
                     Tecnologia e presença estratégica
                     <span className="text-greenPaths-100"> em movimento</span>
                 </h2>
-            </div>
+            </div> */}
         </section>
     );
 }
