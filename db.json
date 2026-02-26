@@ -47,17 +47,12 @@
                         {
                             "icon": "/images/solução.png",
                             "title": "SOLUÇÃO",
-                            "text": "Da concepção à execução..."
+                            "text": "Desenvolver ativações interativas com o objetivo de capturar a atenção do visitante do evento, trazendo informação e, acima de tudo, mostrando como as soluções da Michelin Connected Fleet para o transporte de cargas são completas e eficazes."
                         },
                         {
                             "icon": "/images/objetivo.png",
                             "title": "DESAFIO",
-                            "text": "Precisava marcar presença de forma estratégica..."
-                        },
-                        {
-                            "icon": "/images/desafio.png",
-                            "title": "SOLUÇÃO",
-                            "text": "Da concepção à execução..."
+                            "text": "Mais de 300 m² de estande com 2 totens equipados com inteligência artificial, um telão imersivo de 40 m², um painel anamórfico curvo, mais 2 totens de serviços e 2 ambientes instagramáveis."
                         }
                     ],
                     "bigTitle": "TECNOLOGIA E PRESENÇA ESTRATÉGICA EM MOVIMENTO"
@@ -101,7 +96,7 @@
                 "title": "Cipatex Inpulse",
                 "subtitle": "Conceito de coleção",
                 "description": "Cipatex Inpulse - Conceito de coleção",
-                "image": "/images/michelin-card.png"
+                "image": "/images/CipatexCard.png"
             },
             "hero": {
                 "bannerImage": "/images/banner-cipatex.png",
@@ -128,7 +123,7 @@
                     "type": "triple",
                     "items": [
                         {
-                            "icon": "/images/solucao.png",
+                            "icon": "/images/solução.png",
                             "title": "SOLUÇÃO",
                             "text": "Criar um visual e uma identidade verbal para a coleção Inpulse que traduzissem o conceito de movimento alinhado com a temática do movimento e nas cores para 2024. Trazer um visual impactante, transmitindo energia e inspiração, enquanto mantém uma abordagem inclusiva e diversificada, representando pessoas de diferentes idades e gêneros."
                         },
