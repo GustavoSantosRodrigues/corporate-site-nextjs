@@ -7,7 +7,7 @@ import "swiper/css";
 type Item = {
     title?: string;
     text?: string;
-    icon?: React.ReactNode;
+    icon?: string;
 };
 
 type Props = {
@@ -17,7 +17,7 @@ type Props = {
 function Card({ item }: { item: Item }) {
     return (
         <div className="relative flex h-full flex-col items-center text-center px-6 py-14">
-            {item.icon && <div className="mb-6">{item.icon}</div>}
+            {item.icon && <div className="mb-6"><img src={item.icon} alt={item.title} /></div>}
 
             <h3 className="font-black uppercase text-white xl:text-6xl md:text-5xl text-4xl">
                 {item.title}
