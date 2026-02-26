@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "api": "json-server --watch db.json --port 3333"
+    "lint": "eslint"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
@@ -34,3 +33,4 @@
     "typescript": "^5"
   }
 }
+

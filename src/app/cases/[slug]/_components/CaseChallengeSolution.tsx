@@ -5,13 +5,13 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 type Item = {
-    title: string;
-    text: string;
+    title?: string;
+    text?: string;
     icon?: React.ReactNode;
 };
 
 type Props = {
-    items: Item[];
+    items?: Item[];
 };
 
 function Card({ item }: { item: Item }) {
@@ -31,7 +31,7 @@ function Card({ item }: { item: Item }) {
 }
 
 export default function CaseChallengeSolution({ items }: Props) {
-    const desktopIsSwiper = items.length > 3;
+    const desktopIsSwiper = items && items.length > 3;
 
     return (
         <section className="relative w-full overflow-hidden bg-[#07040e] md:py-20 py-2">
@@ -50,7 +50,7 @@ export default function CaseChallengeSolution({ items }: Props) {
                     spaceBetween={24}
                     slidesPerView={1.05}
                 >
-                    {items.map((item, idx) => (
+                    {items?.map((item, idx) => (
                         <SwiperSlide key={idx}>
                             <Card item={item} />
                         </SwiperSlide>
@@ -69,7 +69,7 @@ export default function CaseChallengeSolution({ items }: Props) {
                         spaceBetween={32}
                         slidesPerView={3}
                     >
-                        {items.map((item, idx) => (
+                        {items?.map((item, idx) => (
                             <SwiperSlide key={idx}>
                                 <Card item={item} />
                             </SwiperSlide>
@@ -77,7 +77,7 @@ export default function CaseChallengeSolution({ items }: Props) {
                     </Swiper>
                 ) : (
                     <div className="container mx-auto grid grid-cols-3 gap-8">
-                        {items.map((item, idx) => (
+                        {items?.map((item, idx) => (
                             <div key={idx} className="relative">
                                 {idx !== 0 && (
                                     <div className="absolute left-0 top-6 h-[calc(100%-3rem)] w-px bg-white/30" />

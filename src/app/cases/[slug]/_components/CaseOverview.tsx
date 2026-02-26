@@ -1,23 +1,22 @@
 import Image from "next/image";
-type Props = {
-  title: string;
-  highlight: string;
-  description: string;
-  bullets: string[];
-  sideImage: any;
-  tags: string[];
+type Tag = {
+  title?: string;
+  highlight?: string;
+  description?: string;
+  bullets?: string[];
+  sideImage?: string;
+  tags?: string[];
 };
 
-
-
-export default function CaseOverview({ title, highlight, description, bullets, sideImage, tags }: Props) {
+export default function CaseOverview({ title, highlight, description, bullets, sideImage, tags }: Tag) {
   return (
     <div className="container mx-auto flex xl:flex-row flex-col justify-between gap-12 py-20">
       <div className="xl:w-6/12 w-full">
 
         <ul className="flex flex-wrap gap-2">
-          {Array.isArray(tags) && tags.map((tag) => (
+          {Array.isArray(tags) && tags.map((tag, idx) => (
             <li
+              key={`${tag}-${idx}`}
               className="
             border border-purplePaths-100
             text-black font-semibold uppercase
@@ -29,8 +28,8 @@ export default function CaseOverview({ title, highlight, description, bullets, s
             hover:text-white
             duration-300
           ">
-            {tag}
-          </li>
+              {tag}
+            </li>
           ))}
         </ul>
 
@@ -42,17 +41,19 @@ export default function CaseOverview({ title, highlight, description, bullets, s
         <p className="mt-6 text-lg text-gray-700 max-w-xl">{description}</p>
 
         <ul className="mt-6 space-y-2 text-lg font-semibold text-purplePaths-100">
-          {bullets.map((b) => (
-            <li key={b}>• {b}</li>
+          {bullets?.map((b, idx) => (
+            <li key={`${b}-${idx}`}>• {b}</li>
           ))}
         </ul>
       </div>
 
       <div className="xl:w-6/12 w-full">
         <Image
-          src={sideImage}
+          src={sideImage || "/images/fallback-side.png"}
           alt="Imagem do case"
           priority
+          width={500}
+          height={500}
           className="w-full h-auto xl:block hidden xl:max-w-full mx-auto xl:mx-0"
         />
       </div>

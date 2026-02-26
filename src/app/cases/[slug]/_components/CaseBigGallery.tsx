@@ -1,6 +1,6 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -8,14 +8,27 @@ import "swiper/css";
 import swiperLeft from "@/assets/images/swiper-left.png";
 import swiperRight from "@/assets/images/swiper-right.png";
 
-type Props = {
-  images: { src: StaticImageData; alt?: string }[];
+type GalleryItem = {
+  title: string;
+  image: string; // "/images/..."
 };
 
-export default function CaseBigGallery({ images }: Props) {
+type Props = {
+  title?: string;
+  items: GalleryItem[];
+};
+
+export default function CaseBigGallery({ title, items }: Props) {
+  if (!items?.length) return null;
+
   return (
     <section className="relative w-full overflow-hidden bg-[#07040e] md:pb-24 pb-5">
       <div className="relative mx-auto w-full max-w-6xl px-4">
+        {title && (
+          <h2 className="mb-8 text-center text-2xl md:text-4xl font-black text-white">
+            {title}
+          </h2>
+        )}
 
         <button className="cursor-pointer hover:scale-110 transition-transform swiper-left absolute -left-15 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 xl:flex items-center justify-center">
           <Image src={swiperLeft} alt="Anterior" />
@@ -41,21 +54,22 @@ export default function CaseBigGallery({ images }: Props) {
           slidesPerView={1}
           spaceBetween={50}
         >
-          {images.map((img, idx) => (
-            <SwiperSlide key={idx}>
+          {items.map((it, idx) => (
+            <SwiperSlide key={`${it.title}-${idx}`}>
               <div className="relative w-full overflow-hidden rounded-2xl">
-
-                {/* altura responsiva */}
                 <div className="relative h-65 sm:h-85 md:h-110 lg:h-130 xl:h-140">
                   <Image
-                    src={img.src}
-                    alt={img.alt ?? `Imagem ${idx + 1}`}
+                    src={it.image || "/images/fallback-gallery.png"}
+                    alt={it.title ?? `Imagem ${idx + 1}`}
                     fill
                     priority={idx === 0}
                     className="object-contain"
                   />
                 </div>
 
+                <div className="px-2 pt-4 text-center text-white/90 font-medium">
+                  {it.title}
+                </div>
               </div>
             </SwiperSlide>
           ))}

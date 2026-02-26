@@ -4,15 +4,17 @@ import CaseCard from "@/components/CaseCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import type { StaticImageData } from "next/image";
 import ButtonOutlinePurple from "@/components/ui/buttonOutlinePurple/buttonOutline";
 
 type CaseItem = {
-    id: string;
+  id: number;
+  slug: string;
+  card: {
     title: string;
     subtitle?: string;
     description?: string;
-    image: StaticImageData;
+    image: string;
+  };
 };
 
 export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
@@ -28,11 +30,11 @@ export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
                             {cases.map((item) => (
                                 <CaseCard
                                     key={item.id}
-                                    title={item.title}
-                                    subtitle={item.subtitle}
-                                    description={item.description}
-                                    image={item.image}
-                                    href={`/cases/${item.id}`}
+                                    title={item?.card?.title || ""}
+                                    subtitle={item?.card?.subtitle}
+                                    description={item?.card?.description}
+                                    image={item?.card?.image || ""}
+                                    href={`/cases/${item.slug}`}
                                 />
                             ))}
                         </div>
@@ -57,11 +59,11 @@ export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
                                 <SwiperSlide key={item.id} className="h-auto">
                                     <div className="h-full">
                                         <CaseCard
-                                            title={item.title}
-                                            subtitle={item.subtitle}
-                                            description={item.description}
-                                            image={item.image}
-                                            href={`/cases/${item.id}`}
+                                            title={item?.card?.title || ""}
+                                            subtitle={item?.card?.subtitle}
+                                            description={item?.card?.description}
+                                            image={item?.card?.image || ""}
+                                            href={`/cases/${item.slug}`}
                                         />
                                     </div>
                                 </SwiperSlide>
