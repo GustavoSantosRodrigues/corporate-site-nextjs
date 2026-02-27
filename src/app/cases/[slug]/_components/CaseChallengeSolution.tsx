@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import { getLoopConfig } from "@/utils/swiper";
 
 type Item = {
     title?: string;
@@ -32,6 +33,7 @@ function Card({ item }: { item: Item }) {
 
 export default function CaseChallengeSolution({ items }: Props) {
     const desktopIsSwiper = items && items.length > 3;
+    const { loop, autoplay } = getLoopConfig(items?.length ?? 0);
 
     return (
         <section className="relative w-full overflow-hidden bg-[#07040e] md:py-10 py-2">
@@ -39,9 +41,9 @@ export default function CaseChallengeSolution({ items }: Props) {
                 {/* MOBILE/TABLET*/}
                 <Swiper
                     modules={[Autoplay]}
-                    loop={true}
+                    loop={loop}
                     autoplay={{
-                        delay: 2500,
+                        delay: autoplay ? 2500 : 0,
                         disableOnInteraction: false,
                         pauseOnMouseEnter: false,
                         waitForTransition: false,
@@ -63,8 +65,8 @@ export default function CaseChallengeSolution({ items }: Props) {
                 {desktopIsSwiper ? (
                     <Swiper
                         modules={[Autoplay]}
-                        loop
-                        autoplay={{ delay: 2500, disableOnInteraction: false }}
+                        loop={loop}
+                        autoplay={{ delay: autoplay ? 2500 : 0, disableOnInteraction: false }}
                         speed={800}
                         spaceBetween={32}
                         slidesPerView={3}

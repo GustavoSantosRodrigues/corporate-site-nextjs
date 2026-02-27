@@ -10,13 +10,13 @@ import swiperLeft from "@/assets/images/swiper-left.png";
 import swiperRight from "@/assets/images/swiper-right.png";
 import Image, { StaticImageData } from "next/image";
 import { images } from "@/assets/images";
+import { getLoopConfig } from "@/utils/swiper";
 
 type ServiceItem = {
     title: string;
     desc: string;
     image: StaticImageData;
 };
-
 
 const services: ServiceItem[] = [
     {
@@ -54,6 +54,7 @@ const services: ServiceItem[] = [
 
 export default function ServicesCarousel() {
     const swiperRef = useRef<SwiperType | null>(null);
+    const { loop, autoplay } = getLoopConfig(services.length);
 
     return (
         <div className="relative mx-auto w-full max-w-5xl">
@@ -91,10 +92,10 @@ export default function ServicesCarousel() {
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 slidesPerView={1}
                 spaceBetween={45}
-                loop={true}
+                loop={loop}
                 speed={700}
                 autoplay={{
-                    delay: 3000,
+                    delay: autoplay ? 3000 : 0,
                     disableOnInteraction: false,
                 }}
                 breakpoints={{

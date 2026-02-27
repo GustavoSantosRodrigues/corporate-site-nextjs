@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperOptions } from "swiper/types";
 import { Pagination, Autoplay } from "swiper/modules";
+import { getLoopConfig } from "@/utils/swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,11 +12,12 @@ type Testimonial = { id: string; text: string; author: string; };
 type Props = { items: Testimonial[]; };
 
 export default function TestimonialsSwiper({ items }: Props) {
+  const { loop, autoplay } = getLoopConfig(items.length);
   const options: SwiperOptions = {
     modules: [Pagination, Autoplay],
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: autoplay ? 5000 : 0,
       disableOnInteraction: false,
     },
     speed: 1000,

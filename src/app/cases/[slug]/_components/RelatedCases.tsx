@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import ButtonOutlinePurple from "@/components/ui/buttonOutlinePurple/buttonOutline";
+import { getLoopConfig } from "@/utils/swiper";
 
 type CaseItem = {
     id: number;
@@ -19,7 +20,7 @@ type CaseItem = {
 
 export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
     if (!cases?.length) return null;
-
+    const { loop, autoplay } = getLoopConfig(cases.length);
     return (
         <>
             <div className="bg-purplePaths-100 py-10">
@@ -64,9 +65,9 @@ export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
                     <div className="block xl:hidden mt-16">
                         <Swiper
                             modules={[Autoplay]}
-                            autoplay={{ delay: 2500, disableOnInteraction: false }}
+                            autoplay={{ delay: autoplay ? 2500 : 0, disableOnInteraction: false }}
                             speed={1000}
-                            loop
+                            loop={loop}
                             spaceBetween={16}
                             slidesPerView={1}
                             breakpoints={{

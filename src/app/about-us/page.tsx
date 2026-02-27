@@ -5,7 +5,6 @@ import { images } from "@/assets/images";
 import { ButtonDefault } from "@/components/ui";
 import TestimonialsSwiper from "@/components/about-us/TestimonialsSwiper";
 import VisitSwiper from "@/components/about-us/VisitSwiper";
-
 const testimonials = [
   {
     id: "t1",
@@ -52,10 +51,10 @@ const slides = [
     id: "5",
     image: images.visita5,
   },
-  // adiciona mais se quiser virar carrossel
 ];
 
 export default function AboutUs() {
+
   return (
     <>
       <section className="relative w-full xl:h-screen md:h-[50vh] h-[30vh] overflow-hidden bg-black">

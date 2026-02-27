@@ -10,6 +10,7 @@ import { useMemo, useState, useEffect } from "react";
 
 import { getCases } from "@/services/casesService";
 import { CaseApiItem } from "@/schemas/case.schema";
+import { getLoopConfig } from "@/utils/swiper";
 
 export default function CasesPage() {
   const [cases, setCases] = useState<CaseApiItem[]>([]);
@@ -17,6 +18,7 @@ export default function CasesPage() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [search, setSearch] = useState("");
   const q = search.toLowerCase();
+  const { loop, autoplay } = getLoopConfig(cases.length);
 
   useEffect(() => {
     const load = async () => {
@@ -129,8 +131,8 @@ const filteredCases = useMemo(() => {
           <div className="xl:hidden mt-16">
             <Swiper
               modules={[Autoplay]}
-              autoplay={{ delay: 2500 }}
-              loop
+              loop={loop}
+              autoplay={{ delay: autoplay ? 2500 : 0 }}
               spaceBetween={16}
               slidesPerView={1}
               breakpoints={{ 1024: { slidesPerView: 2 } }}

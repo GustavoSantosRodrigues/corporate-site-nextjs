@@ -11,13 +11,14 @@ import { useEffect, useState } from "react";
 import { getFeaturedCases } from "@/services/casesService";
 import { z } from "zod";
 import { CaseApiItemSchema } from "@/schemas/case.schema";
+import { getLoopConfig } from "@/utils/swiper";
 
 export type CaseApiItem = z.infer<typeof CaseApiItemSchema>;
 
 export default function ProjectsShowcaseSection() {
 
   const [cases, setCases] = useState<CaseApiItem[]>([]);
-
+  const { loop, autoplay } = getLoopConfig(cases.length);
   useEffect(() => {
     const load = async () => {
       try {
@@ -71,7 +72,7 @@ export default function ProjectsShowcaseSection() {
             </h2>
 
             <p className="mx-auto mt-6 md:text-3xl text-xl   text-white font-medium">
-             Na Base3 Comunicação, cada projeto é conduzido com dedicação e expertise, refletindo o empenho de uma equipe apaixonada pelo que faz. Com foco na qualidade de cada entrega, transformamos desafios em resultados surpreendentes
+              Na Base3 Comunicação, cada projeto é conduzido com dedicação e expertise, refletindo o empenho de uma equipe apaixonada pelo que faz. Com foco na qualidade de cada entrega, transformamos desafios em resultados surpreendentes
             </p>
           </div>
 
@@ -94,11 +95,11 @@ export default function ProjectsShowcaseSection() {
             <Swiper
               modules={[Autoplay]}
               autoplay={{
-                delay: 2500,
+                delay: autoplay ? 2500 : 0,
                 disableOnInteraction: false,
               }}
               speed={1000}
-              loop={true}
+              loop={loop}
               spaceBetween={16}
               slidesPerView={1}
               breakpoints={{

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { getLoopConfig } from "@/utils/swiper";
 
 import "swiper/css";
 
@@ -12,13 +13,11 @@ const logos = [
   { id: "3m", src: images.img3M, alt: "3M" },
   { id: "cashme", src: images.cashMe, alt: "CashMe" },
   { id: "cinpal", src: images.cinpal, alt: "Cinpal" },
-  // { id: "cipatex", src: images.cipatex, alt: "Cipatex" },
   { id: "compass", src: images.compass, alt: "Compass" },
   { id: "dpaschoal", src: images.dPaschoal, alt: "DPaschoal" },
   { id: "fagron", src: images.fagron, alt: "Fagron" },
   { id: "infinox", src: images.infinox, alt: "Infinox" },
   { id: "lalamove", src: images.lalamove, alt: "Lalamove" },
-  // { id: "oxitec", src: images.oxitec, alt: "Oxitec" },
   { id: "raizen", src: images.raizen, alt: "Raízen" },
   { id: "solventum", src: images.solventum, alt: "Solventum" },
   { id: "syngenta", src: images.syngenta, alt: "Syngenta" },
@@ -26,18 +25,15 @@ const logos = [
 
 
 export default function ClientsMarquee() {
+    const { loop, autoplay } = getLoopConfig(logos.length);
   return (
     <section className="w-full bg-white">
       <div className="py-10">
         <Swiper
           modules={[Autoplay]}
-          loop
-          slidesPerView="auto"
-          spaceBetween={56}
-          speed={7000}
-          allowTouchMove={false}
+          loop={loop}
           autoplay={{
-            delay: 0,
+            delay: autoplay ? 0 : 0,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}

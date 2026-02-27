@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 
 import swiperLeft from "@/assets/images/swiper-left.png";
 import swiperRight from "@/assets/images/swiper-right.png";
+import { getLoopConfig } from "@/utils/swiper";
 
 type Slide = {
   id: string;
@@ -23,16 +24,17 @@ type Props = {
 };
 
 export default function VisitSwiper({ slides }: Props) {
-  const options: SwiperOptions = {
+    const { loop, autoplay } = getLoopConfig(slides.length);
+    const options: SwiperOptions = {
     modules: [Navigation, Pagination, Autoplay],
     slidesPerView: 1,
     spaceBetween: 24,
     speed: 700,
     autoplay: {
-      delay: 3000,
+      delay: autoplay ? 3000 : 0,
       disableOnInteraction: false,
     },
-    loop: slides.length > 1,
+    loop: loop,
     navigation: {
       prevEl: ".visit-swiper-prev",
       nextEl: ".visit-swiper-next",

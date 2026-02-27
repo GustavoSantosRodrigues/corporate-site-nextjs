@@ -7,6 +7,8 @@ import "swiper/css";
 
 import swiperLeft from "@/assets/images/swiper-left.png";
 import swiperRight from "@/assets/images/swiper-right.png";
+import { getLoopConfig } from "@/utils/swiper";
+
 
 type GalleryItem = {
   title: string;
@@ -20,7 +22,7 @@ type Props = {
 
 export default function CaseBigGallery({ title, items }: Props) {
   if (!items?.length) return null;
-
+  const { loop, autoplay } = getLoopConfig(items.length);
   return (
     <section className="relative w-full overflow-hidden bg-[#07040e] md:pb-24 pb-5">
       <div className="relative mx-auto w-full max-w-6xl px-4">
@@ -45,13 +47,13 @@ export default function CaseBigGallery({ title, items }: Props) {
 
         <Swiper
           modules={[Autoplay, Navigation]}
-          loop
+          loop={loop}
           navigation={{
             prevEl: ".swiper-left",
             nextEl: ".swiper-right",
           }}
           autoplay={{
-            delay: 3200,
+            delay: autoplay ? 3200 : 0,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}

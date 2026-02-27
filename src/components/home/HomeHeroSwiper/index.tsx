@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 
 import swiperLeft from "@/assets/images/swiper-left.png";
 import swiperRight from "@/assets/images/swiper-right.png";
+import { getLoopConfig } from "@/utils/swiper";
 
 type Slide = {
   id: string;
@@ -42,6 +43,7 @@ const slides: Slide[] = [
 ];
 
 export default function HomeHeroSwiper() {
+  const { loop, autoplay } = getLoopConfig(slides.length);
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
@@ -50,9 +52,9 @@ export default function HomeHeroSwiper() {
         modules={[Pagination, Navigation, Autoplay]}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         slidesPerView={1}
-        loop={true}
+        loop={loop}
         speed={700}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: autoplay ? 3000 : 0, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         className="hero-swiper relative"
         autoHeight={true}
