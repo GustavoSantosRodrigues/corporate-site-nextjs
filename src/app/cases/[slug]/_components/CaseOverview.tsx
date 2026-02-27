@@ -35,10 +35,7 @@ export default function CaseOverview({ title, bullets, sideImage, tags }: Tag) {
 
         <h2 className="mt-6 xl:text-7xl md:text-4xl text-xl font-black">
           {title} <br />
-          {/* <span className="text-purplePaths-100">{highlight}</span> */}
         </h2>
-
-        {/* <p className="mt-6 text-lg text-gray-700 max-w-xl">{description}</p> */}
 
         <ul className="mt-6 space-y-2 text-lg font-semibold text-purplePaths-100">
           {bullets?.map((b, idx) => (
@@ -52,9 +49,9 @@ export default function CaseOverview({ title, bullets, sideImage, tags }: Tag) {
           src={sideImage || "/images/fallback-side.png"}
           alt="Imagem do case"
           priority
-          width={500}
-          height={500}
-          className="w-full h-auto xl:block hidden xl:max-w-full mx-auto xl:mx-0"
+          width={400}
+          height={400}
+          className="h-auto xl:block hidden xl:max-w-full mx-auto xl:mx-0"
         />
       </div>
     </div>
