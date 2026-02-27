@@ -9,6 +9,7 @@ import {
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 import { images } from "@/assets/images";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -21,20 +22,29 @@ export default function Footer() {
                         <div>
                             <Image src={images.logoBase3} alt="logo" />
 
-                            <p className="text-black font-ArtegraSans font-black text-xl leading-10 hover:underline transition-all duration-300">Trabalhe Conosco</p>
+                            <Link
+                                href="/contact"
+                                className="text-black font-ArtegraSans font-black text-xl leading-10 hover:underline transition-all duration-300"
+                            >
+                                Trabalhe Conosco
+                            </Link>
 
                             <p className="font-poppins font-medium text-xl text-black leading-10">
                                 2024 | Todos os direitos reservados
                             </p>
                             <div className="mt-6 flex gap-4">
 
+                                <Link href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faLinkedin} className="text-black w-10 h-10 hover:text-blue-600 transition-all duration-300 cursor-pointer" />
+                                </Link>
 
-                                <FontAwesomeIcon icon={faLinkedin} className="text-black w-10 h-10 hover:text-blue-600 transition-all duration-300 cursor-pointer" />
+                                <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faInstagram} className="text-black w-10 h-10 hover:text-pink-600 transition-all duration-300 cursor-pointer" />
+                                </Link>
 
-
-                                <FontAwesomeIcon icon={faInstagram} className="text-black w-10 h-10 hover:text-pink-600 transition-all duration-300 cursor-pointer" />
-
-                                <FontAwesomeIcon icon={faYoutube} className="text-black w-10 h-10 hover:text-red-600 transition-all duration-300 cursor-pointer" />
+                                <Link href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faYoutube} className="text-black w-10 h-10 hover:text-red-600 transition-all duration-300 cursor-pointer" />
+                                </Link>
 
                             </div>
                         </div>
