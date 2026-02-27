@@ -38,7 +38,7 @@ export default function Footer() {
 
                             </div>
                         </div>
-                        {/* <div className="md:text-right">
+                        <div className="md:text-right">
                             <h3 className="font-ArtegraSans font-black md:text-2xl text-xl text-black leading-10 xl:ml-8 xl:mt-0 mt-5">Fale com BASE3</h3>
 
                             <a target="_blank" rel="noopener noreferrer" className="mt-4 flex items-start justify-start gap-2 md:justify-end" href="https://www.google.com/maps/dir//Rua+Dona+Rosa+de+Gusm%C3%A3o,+973+-+casa+-+sala+01+-+Jardim+Chapad%C3%A3o,+Campinas+-+SP,+13070-187/@-22.8845901,-47.155626,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x94c8c617520f82af:0x84377d554f3141ab!2m2!1d-47.0732244!2d-22.8846113?entry=ttu">
@@ -49,7 +49,7 @@ export default function Footer() {
                                     973 Jardim Chapadão, Campinas
                                 </span>
                             </a>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </footer>
