@@ -10,7 +10,6 @@
                     "images_category": "/images/eventos.png"
                 }
             ],
-
             "isFeatured": true,
             "orderFeatured": 1,
             "card": {
@@ -89,7 +88,6 @@
                     "images_category": "/images/eventos.png"
                 }
             ],
-
             "isFeatured": true,
             "orderFeatured": 2,
             "card": {
@@ -155,7 +153,369 @@
                     ]
                 }
             }
+        },
+        {
+            "id": 3,
+            "slug": "3m-ambientacao-cic",
+            "categories": [
+                {
+                    "key": "planejamento",
+                    "label": "Planejamento",
+                    "images_category": "/images/planejamento.png"
+                }
+            ],
+            "isFeatured": true,
+            "orderFeatured": 2,
+            "card": {
+                "title": "3M Ambientação CIC",
+                "subtitle": "Ambientação",
+                "description": "3M Ambientação CIC",
+                "image": "/images/3mcard.png"
+            },
+            "hero": {
+                "bannerImage": "/images/banner3m.png",
+                "title": "3M",
+                "highlight": "Centro de Inovação",
+                "description": "Ambientação do espaço localizado na planta de Sumaré (SP), divulgando as últimas inovações da 3M."
+            },
+            "sections": [
+                {
+                    "type": "overview",
+                    "chips": [
+                        "Produção gráfica"
+                    ],
+                    "bullets": [
+                        "Conceito criativo",
+                        "Produção gráfica",
+                        "Gestão de fornecedores"
+                    ],
+                    "image": "/images/mao-case.png"
+                },
+                {
+                    "type": "triple",
+                    "items": [
+                        {
+                            "icon": "/images/solução.png",
+                            "title": "SOLUÇÃO",
+                            "text": "Transformar o Centro de Inovação da 3M em um grande showroom de inovações da marca nas áreas de consumo e transporte. Esse foi o desafio ao trabalharmos em um espaço de grandes proporções e com alta visitação."
+                        },
+                        {
+                            "icon": "/images/desafio.png",
+                            "title": "DESAFIO",
+                            "text": "Exibir a tecnologia empregada em cada divisão da 3M e também suas aplicações no dia a dia do consumidor foi o principal objetivo da ambientação. Para isso, criamos painéis de grande formato que mostram detalhes das soluções 3M, contribuindo para tornar o Centro um ponto de encontro entre entusiastas da inovação."
+                        }
+                    ],
+                    "bigTitle": "Inovação como inspiração"
+                }
+            ],
+            "swipers": {
+                "brand": {
+                    "title": "Uma Campanha que impulsiona a moda",
+                    "items": [
+                        {
+                            "title": "Conectando Caminhos",
+                            "image": "/images/3mconectando-caminhos.png"
+                        },
+                        {
+                            "title": "Melhorando Vida",
+                            "image": "/images/3mmelhorando-vida.png"
+                        },
+                        {
+                            "title": "Trabalho Colaborativo",
+                            "image": "/images/3mtrabalho-colaborativo.png"
+                        },
+                        {
+                            "title": "Transportes",
+                            "image": "/images/transportes.png"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 4,
+            "slug": "cosan-sp-verde-2025",
+            "categories": [
+                {
+                    "key": "evento",
+                    "label": "Evento",
+                    "images_category": "/images/evento.png"
+                }
+            ],
+            "isFeatured": true,
+            "orderFeatured": 2,
+            "card": {
+                "title": "Cosan",
+                "subtitle": "Agenda SP + Verde 2025",
+                "description": "Cosan Agenda SP + Verde 2025",
+                "image": "/images/cosan-banner.png"
+            },
+            "hero": {
+                "bannerImage": "/images/bannercosan.png",
+                "title": "Agenda SP",
+                "highlight": "+ Verde 2025",
+                "description": "Produção e gestão completas da participação da Cosan no maior summit de sustentabilidade e economia verde de São Paulo."
+            },
+            "sections": [
+                {
+                    "type": "overview",
+                    "chips": [
+                        "Produção gráfica"
+                    ],
+                    "bullets": [
+                        "Conceito criativo",
+                        "Produção gráfica",
+                        "Gestão de fornecedores"
+                    ],
+                    "image": "/images/mao-case.png"
+                },
+                {
+                    "type": "triple",
+                    "items": [
+                        {
+                            "icon": "/images/solução.png",
+                            "title": "SOLUÇÃO",
+                            "text": "Como patrocinadora principal do Summit Agenda SP + Verde 2025, a Cosan precisava marcar presença com excelência em um evento com mais de 6 mil pessoas no Parque Villa-Lobos, comunicando de forma integrada as soluções sustentáveis de suas diferentes empresas."
+                        },
+                        {
+                            "icon": "/images/desafio.png",
+                            "title": "DESAFIO",
+                            "text": "Projetamos e produzimos um estande de 100m² com totens interativos da Comgás, Necta, Rumo e Cosan, além da exposição de veículos Edge e Comgás. Coordenamos equipes uniformizadas, catering executivo para reuniões estratégicas e toda a sinalização do espaço."
+                        }
+                    ],
+                    "bigTitle": "Presença de impacto no maior encontro verde de São Paulo"
+                }
+            ],
+            "swipers": {
+                "brand": {
+                    "title": "Uma Campanha que impulsiona a moda",
+                    "items": [
+                        {
+                            "title": "Conectando Caminhos",
+                            "image": "/images/cosan-swiper.jpg"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 5,
+            "slug": "Vendii",
+            "categories": [
+                {
+                    "key": "evento",
+                    "label": "Evento",
+                    "images_category": "/images/evento.png"
+                }
+            ],
+            "isFeatured": true,
+            "orderFeatured": 2,
+            "card": {
+                "title": "Vendii",
+                "subtitle": "Branding de identidade",
+                "description": "Vendii Branding de identidade",
+                "image": "/images/card-verndi.png"
+            },
+            "hero": {
+                "bannerImage": "/images/banner-vendii.png",
+                "title": "Vendii",
+                "highlight": "Branding e identidade",
+                "description": "Branding e identidade da Vendii."
+            },
+            "sections": [
+                {
+                    "type": "overview",
+                    "chips": [
+                        "Branding Design"
+                    ],
+                    "bullets": [
+                        "Conceito criativo",
+                        "Produção gráfica",
+                        "Gestão de fornecedores"
+                    ],
+                    "image": "/images/mao-case.png"
+                },
+                {
+                    "type": "triple",
+                    "items": [
+                        {
+                            "icon": "/images/solução.png",
+                            "title": "SOLUÇÃO",
+                            "text": " Reposicionar a marca Vendii para que sua identidade fosse aplicável em thumbs de apps, navegadores e também no ambiente de logística."
+                        },
+                        {
+                            "icon": "/images/desafio.png",
+                            "title": "DESAFIO",
+                            "text": "Além da implementação do novo branding design, desenvolvemos um brand book, um website e toda a papelaria da marca."
+                        }
+                    ],
+                    "bigTitle": "Fortalecendo Identidade e Propósito"
+                }
+            ],
+            "swipers": {
+                "brand": {
+                    "title": "Vendii",
+                    "items": [
+                        {
+                            "title": "Livros",
+                            "image": "/images/llivros-vendi.jpg"
+                        },
+                        {
+                            "title": "Site",
+                            "image": "/images/site-vendi.jpg"
+                        },
+                        {
+                            "title": "Bolsa",
+                            "image": "/images/bolsa-vendi.jpg"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 6,
+            "slug": "lalamove",
+            "categories": [
+                {
+                    "key": "campanha",
+                    "label": "Campanha",
+                    "images_category": "/images/campanha-icon.png"
+                }
+            ],
+            "isFeatured": true,
+            "orderFeatured": 2,
+            "card": {
+                "title": "LALAMOVE",
+                "subtitle": "Campanha de awareness",
+                "description": "LALAMOVE | FÉRIAS DE VERÃO",
+                "image": "/images/card-lalamove.png"
+            },
+            "hero": {
+                "bannerImage": "/images/banner-lalamove.png",
+                "title": "LALAMOVE",
+                "highlight": "Campanha de awareness",
+                "description": "LALAMOVE | FÉRIAS DE VERÃO"
+            },
+            "sections": [
+                {
+                    "type": "overview",
+                    "chips": [
+                        "Planejamento",
+                        "Digital",
+                        "TV"
+                    ],
+                    "bullets": [
+                        "Planejamento on/off",
+                        "Conceito criativo"
+                    ],
+                    "image": "/images/mao-case.png"
+                },
+                {
+                    "type": "triple",
+                    "items": [
+                        {
+                            "icon": "/images/solução.png",
+                            "title": "SOLUÇÃO",
+                            "text": "O desafio desse job foi capturar a essência das férias de janeiro, mostrando como a LLM pode atender seus clientes mesmo durante esse período. A ideia foi criar um cenário que transmitisse descontração e facilidade, destacando que, independentemente do lugar onde o cliente esteja - na praia ou viajando - a LLM oferece preços competitivos e um atendimento eficiente."
+                        },
+                        {
+                            "icon": "/images/desafio.png",
+                            "title": "DESAFIO",
+                            "text": "O objetivo da campanha foi demonstrar que a LLM continuava presente e acessível para seus clientes durante as férias. Buscamos reforçar a confiança na marca, evidenciando que a LLM é uma parceira que se preocupa em proporcionar boas ofertas e um serviço de qualidade, mesmo em momentos de lazer e descanso."
+                        }
+                    ],
+                    "bigTitle": "Conveniência na palma da mão"
+                }
+            ],
+            "swipers": {
+                "brand": {
+                    "title": "LALAMOVE",
+                    "items": [
+                        {
+                            "title": "Grandes Entregas",
+                            "image": "/images/grandes-entregas.jpg"
+                        },
+                        {
+                            "title": "Cupom",
+                            "image": "/images/cupom.jpg"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 7,
+            "slug": "Veiling | Emoção que ficar no ar",
+            "categories": [
+                {
+                    "key": "campanha",
+                    "label": "Campanha",
+                    "images_category": "/images/campanha-icon.png"
+                }
+            ],
+            "isFeatured": true,
+            "orderFeatured": 2,
+            "card": {
+                "title": "Veiling | Emoção que ficar no ar",
+                "subtitle": "Campanha de institucional",
+                "description": "Veiling | Emoção que ficar no ar",
+                "image": "/images/card-veiling.png"
+            },
+            "hero": {
+                "bannerImage": "/images/banner-veiling.png",
+                "title": "VEILING",
+                "highlight": "Campanha de Ana Hickmann",
+                "description": "Veiling | Emoção que ficar no ar"
+            },
+            "sections": [
+                {
+                    "type": "overview",
+                    "chips": [
+                        "Conceito de campanha",
+                        "TV"
+                    ],
+                    "bullets": [
+                        "Conceito criativo",
+                        "Produção fotográfica"
+                    ],
+                    "image": "/images/mao-case.png"
+                },
+                {
+                    "type": "triple",
+                    "items": [
+                        {
+                            "icon": "/images/solução.png",
+                            "title": "SOLUÇÃO",
+                            "text": "Criar uma campanha que equilibrasse o apelo emocional característico da Veiling Holambra com uma abordagem mais alinhada ao varejo, visando fortalecer a conexão com o consumidor final. "
+                        },
+                        {
+                            "icon": "/images/desafio.png",
+                            "title": "DESAFIO",
+                            "text": "Com a campanha, destacamos o mote “Emoção que fica no ar” ao lado de um visual mais próximo do varejo. Para a comunicação, contamos com o protagonismo da apresentadora Ana Hickmann."
+                        }
+                    ],
+                    "bigTitle": "Como conectamos emoção e vendas."
+                }
+            ],
+            "swipers": {
+                "brand": {
+                    "title": "Veiling",
+                    "items": [
+                        {
+                            "title": "Flor",
+                            "image": "/images/flor-emocao.jpg"
+                        },
+                        {
+                            "title": "Facebook",
+                            "image": "/images/flor-facebook.jpg"
+                        },
+                        {
+                            "title": "Emoção que fica no ar",
+                            "image": "/images/flor-emocao-noar-jpg"
+                        }
+                    ]
+                }
+            }
         }
-
     ]
 }

@@ -71,10 +71,17 @@ export default function ProjectsShowcaseSection() {
             </h2>
 
             <p className="mx-auto mt-6 md:text-3xl text-xl   text-white font-medium">
-              Na nossa comunicação, cada projeto é conduzido com dedicação e expertise, refletindo o empenho
-              de uma equipe apaixonada pelo que faz. Com foco na qualidade de cada entrega, transformamos
-              desafios em resultados surpreendentes.
+              Gostou do que viu? Vamos transformar o seu projeto também! Entre em contato e descubra como podemos ajudar você a alcançar resultados incríveis.
             </p>
+
+            <div className="flex justify-center py-10">
+              <a
+                href="tel:+5511999999999"
+                className="hover:bg-white hover:text-purplePaths-100 transition-all duration-300 ease-in-out text-white border border-white font-inter font-semibold 3xl:text-4xl xl:text-3xl md:text-2xl text-2xl px-16 py-4 rounded-full"
+              >
+                Solicitar orçamento
+              </a>
+            </div>
           </div>
 
           <div className="hidden xl:block">

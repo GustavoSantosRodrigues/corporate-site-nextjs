@@ -41,7 +41,6 @@ export default async function CaseDetail({
             <CaseOverview
                 title={item.categories?.[0]?.label ?? "CASE"}
                 highlight={item.card?.subtitle ?? ""}
-                description={item.hero?.description ?? item.card?.description ?? ""}
                 bullets={overview?.bullets ?? []}
                 sideImage={overview?.image ?? "/images/fallback-side.png"}
                 tags={overview?.chips ?? []}
