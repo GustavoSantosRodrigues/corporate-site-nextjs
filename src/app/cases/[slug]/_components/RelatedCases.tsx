@@ -24,6 +24,20 @@ export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
         <>
             <div className="bg-purplePaths-100 py-10">
                 <div className="container">
+
+                    <div className="py-5">
+                        <h2 className="font-poppins 3xl:leading-snug font-semibold text-white xl:text-4xl md:text-3xl text-2xl text-center">
+                            Gostou do que viu? Vamos transformar o seu projeto também! <br />
+                            Entre em contato e descubra como podemos ajudar você a alcançar resultados incríveis.
+                        </h2>
+                    </div>
+
+                    <div className="flex justify-center py-10">
+                        <a href="" className="hover:bg-white hover:text-purplePaths-100 transition-all duration-300 ease-in-out text-white border border-white font-inter font-semibold 3xl:text-4xl xl:text-3xl md:text-2xl text-2xl px-16 py-4 rounded-full">
+                            Solicitar orçamento
+                        </a>
+                    </div>
+
                     <div className="xl:py-10 py-5">
                         <h2 className="font-black text-white 3xl:text-7xl xl:text-5xl md:text-4xl text-2xl text-center uppercase 3xl:leading-tight">
                             <span className="text-greenPaths-100">Cases semelhantes</span> {" "}
