@@ -15,6 +15,8 @@ export default function CasesPage() {
   const [cases, setCases] = useState<CaseApiItem[]>([]);
 
   const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [search, setSearch] = useState("");
+  const q = search.toLowerCase();
 
   useEffect(() => {
     const load = async () => {
@@ -30,13 +32,24 @@ export default function CasesPage() {
     load();
   }, []);
 
-  const filteredCases = useMemo(() => {
-    if (activeCategory === "all") return cases;
+const filteredCases = useMemo(() => {
+  const q = search.trim().toLowerCase();
 
-    return cases.filter((c) =>
-      c.categories?.some((cat) => cat.key === activeCategory)
-    );
-  }, [cases, activeCategory]);
+  return cases.filter((c) => {
+    const matchesCategory =
+      activeCategory === "all" ||
+      c.categories?.some((cat) => cat.key === activeCategory);
+
+    const matchesSearch =
+      !q ||
+      c.card.title.toLowerCase().includes(q) ||
+      (c.card.description ?? "").toLowerCase().includes(q) ||
+      (c.card.subtitle ?? "").toLowerCase().includes(q) ||
+      c.categories?.some((cat) => cat.label.toLowerCase().includes(q));
+
+    return matchesCategory && matchesSearch;
+  });
+}, [cases, activeCategory, search]);
 
   const categoriesFromApi = useMemo(() => {
     const map = new Map();
