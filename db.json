@@ -516,6 +516,81 @@
                     ]
                 }
             }
+        },
+          {
+            "id": 8,
+            "slug": "Sherwin-williams",
+            "categories": [
+                {
+                    "key": "campanha",
+                    "label": "Campanha",
+                    "images_category": "/images/campanha-icon.png"
+                }
+            ],
+            "isFeatured": true,
+            "orderFeatured": 2,
+            "card": {
+                "title": "Sherwin-williams | SWPRO",
+                "subtitle": "Campanha digital, ponto de venda e institucional",
+                "description": "Sherwin-williams | SWPRO",
+                "image": "/images/card-sherli.png"
+            },
+            "hero": {
+                "bannerImage": "/images/banner-Sherwin.png",
+                "title": "Sherwin Williams",
+                "highlight": "SW Pro",
+                "description": "A Sherwin-Williams é uma empresa global de tintas e revestimentos, conhecida por sua inovação e qualidade em produtos para proteção e beleza de superfícies."
+            },
+            "sections": [
+                {
+                    "type": "overview",
+                    "chips": [
+                        "Conceito de campanha"
+                    ],
+                    "bullets": [
+                        "Conceito criativo",
+                        "Produção fotográfica",
+                        "Ativação de marca",
+                        "Redes sociais"
+                    ],
+                    "image": "/images/mao-case.png"
+                },
+                {
+                    "type": "triple",
+                    "items": [
+                        {
+                            "icon": "/images/solução.png",
+                            "title": "SOLUÇÃO",
+                            "text": "Dar suporte a profissionais da pintura e acabamento na captação de novos clientes, ter o endosso da qualidade, quase como uma rede social só de pintores."
+                        },
+                        {
+                            "icon": "/images/desafio.png",
+                            "title": "DESAFIO",
+                            "text": " Para conectar consumidores a pintores profissionais da sua região, a Sherwin-Williams desenvolveu a plataforma on-line “Ache Seu Pintor”. Ela funciona como um espaço de busca para os clientes e de divulgação do trabalho para os pintores."
+                        }
+                    ],
+                    "bigTitle": "Uma maneira inovadora de encontrar um serviço"
+                }
+            ],
+            "swipers": {
+                "brand": {
+                    "title": "Veiling",
+                    "items": [
+                        {
+                            "title": "Aplicativo",
+                            "image": "/images/app-Sherwin-williams.jpg"
+                        },
+                        {
+                            "title": "Passo a passo",
+                            "image": "/images/passo-passo.jpg"
+                        },
+                        {
+                            "title": "Livro",
+                            "image": "/images/livro.jpg"
+                        }
+                    ]
+                }
+            }
         }
     ]
 }
