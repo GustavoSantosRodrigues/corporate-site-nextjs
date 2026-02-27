@@ -33,7 +33,7 @@ export default function RelatedCases({ cases }: { cases: CaseItem[] }) {
                     </div>
 
                     <div className="flex justify-center py-10">
-                        <a href="" className="hover:bg-white hover:text-purplePaths-100 transition-all duration-300 ease-in-out text-white border border-white font-inter font-semibold 3xl:text-4xl xl:text-3xl md:text-2xl text-2xl px-16 py-4 rounded-full">
+                        <a href="tel:+5511999999999" className="hover:bg-white hover:text-purplePaths-100 transition-all duration-300 ease-in-out text-white border border-white font-inter font-semibold 3xl:text-4xl xl:text-3xl md:text-2xl text-2xl px-16 py-4 rounded-full">
                             Solicitar orçamento
                         </a>
                     </div>
